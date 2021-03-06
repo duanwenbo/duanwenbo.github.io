@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Start form there</title>
+    <url>/2021/03/05/Start-form-there/</url>
+    <content><![CDATA[<h1 id="Welcome"><a href="#Welcome" class="headerlink" title="Welcome"></a>Welcome</h1><p>Finally, build up this site.</p>
+<span id="more"></span>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">&quot;hello world&quot;</span>)</span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Daily</category>
+      </categories>
+      <tags>
+        <tag>First</tag>
+      </tags>
+  </entry>
+</search>
