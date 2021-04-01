@@ -24,7 +24,7 @@
 
   <meta name="description" content="Linear Regression with multiple variablesIt is common to consider more than one features when making a prediction. For example when predicting the price of a house:">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ML Learning Note - polynomial regression and feature scaling">
+<meta property="og:title" content="ML Learning Note - Polynomial Regression and Feature Scaling">
 <meta property="og:url" content="http://duanwenbo.github.io/2021/04/01/ML-Learning-Note---polynomial-regression-and-feature-scaling/index.html">
 <meta property="og:site_name" content="Bobby&#39;s Blog">
 <meta property="og:description" content="Linear Regression with multiple variablesIt is common to consider more than one features when making a prediction. For example when predicting the price of a house:">
@@ -33,7 +33,7 @@
 <meta property="og:image" content="http://duanwenbo.github.io/images/L4_feature_scale.png">
 <meta property="og:image" content="http://duanwenbo.github.io/images/L4_polynomial.png">
 <meta property="article:published_time" content="2021-04-01T21:38:50.000Z">
-<meta property="article:modified_time" content="2021-04-01T15:38:59.407Z">
+<meta property="article:modified_time" content="2021-04-01T18:11:43.422Z">
 <meta property="article:author" content="Bobby">
 <meta property="article:tag" content="Machine Learning">
 <meta property="article:tag" content="Gradient Descent">
@@ -55,7 +55,7 @@
   };
 </script>
 
-  <title>ML Learning Note - polynomial regression and feature scaling | Bobby's Blog</title>
+  <title>ML Learning Note - Polynomial Regression and Feature Scaling | Bobby's Blog</title>
   
 
 
@@ -153,11 +153,6 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
 
   </li>
-        <li class="menu-item menu-item-list">
-
-    <a href="/list/" rel="section"><i class="fa fa-list fa-fw"></i>list</a>
-
-  </li>
         <li class="menu-item menu-item-about">
 
     <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
@@ -229,7 +224,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          ML Learning Note - polynomial regression and feature scaling
+          ML Learning Note - Polynomial Regression and Feature Scaling
         </h1>
 
         <div class="post-meta">
@@ -240,7 +235,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-04-01 22:38:50 / Modified: 16:38:59" itemprop="dateCreated datePublished" datetime="2021-04-01T22:38:50+01:00">2021-04-01</time>
+              <time title="Created: 2021-04-01 22:38:50 / Modified: 19:11:43" itemprop="dateCreated datePublished" datetime="2021-04-01T22:38:50+01:00">2021-04-01</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -253,7 +248,7 @@
             </span>
 
           
-            <span id="/2021/04/01/ML-Learning-Note---polynomial-regression-and-feature-scaling/" class="post-meta-item leancloud_visitors" data-flag-title="ML Learning Note - polynomial regression and feature scaling" title="Views">
+            <span id="/2021/04/01/ML-Learning-Note---polynomial-regression-and-feature-scaling/" class="post-meta-item leancloud_visitors" data-flag-title="ML Learning Note - Polynomial Regression and Feature Scaling" title="Views">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -298,7 +293,7 @@ h_\theta(x) = \theta_0+\theta_{1}x_1+\theta_2x_2+\theta_3x_3+...+\theta_nx_n</sc
 \theta_2\\
 \vdots\\
 \theta_n
-\end{bmatrix}</script><p>Also more generally, <strong>gradient decent algorithm</strong> can be written as:</p>
+\end{bmatrix}</script><p>Also more generally, <strong>gradient descent algorithm</strong> can be written as:</p>
 <script type="math/tex; mode=display">
 \theta_j := \theta_j-\alpha\frac{1}{m}\sum_{i=1}^{m}[h_\theta(x^{(i)}-y^{(i)})]x_j^{(i)}</script><script type="math/tex; mode=display">
 (simutaneously\ update\ \theta_j\ for\ j=0,...,n)</script><p>However, it also comes with some problem:</p>
@@ -322,12 +317,32 @@ X_{norm} = \frac{x_n-\mu_n}{s_n}</script><p>where</p>
 <p>For example, we may want a quadradic function <script type="math/tex">h_\theta(x) = \theta_0+\theta_1x_1+\theta_2x_2^2</script>. Assuming: <script type="math/tex">x_2=x_2^2</script>, to covert the quadratic function to a linear model which we are more familiar with.</p>
 <p><img src="/images/L4_polynomial.png" width="40%" height="40%" style="margin: 0 auto;"></p>
 <p><strong>Note:</strong> It is obvious that we need to scale the feature in polynomial regression since the features are more different from each other .</p>
+<blockquote>
+<p><em>The main contents of the note were summarized from the Machine Learning Course by Andrew Ng. Course URL: <a target="_blank" rel="noopener" href="https://www.coursera.org/learn/machine-learning">Machine Learning | Coursera</a></em>  ↩</p>
+</blockquote>
 
     </div>
 
     
     
     
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>Bobby
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="http://duanwenbo.github.io/2021/04/01/ML-Learning-Note---polynomial-regression-and-feature-scaling/" title="ML Learning Note - Polynomial Regression and Feature Scaling">http://duanwenbo.github.io/2021/04/01/ML-Learning-Note---polynomial-regression-and-feature-scaling/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
 
       <footer class="post-footer">
           
@@ -347,7 +362,10 @@ X_{norm} = \frac{x_n-\mu_n}{s_n}</script><p>where</p>
     <a href="/2021/03/11/ML-Learning-Note---Batch-Gradient-Descent-Algorithm/" rel="prev" title="ML Learning Note - Batch Gradient Descent Algorithm">
       <i class="fa fa-chevron-left"></i> ML Learning Note - Batch Gradient Descent Algorithm
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2021/04/01/ML-Learning-Note---Normal-Equation/" rel="next" title="ML Learning Note - Normal Equation">
+      ML Learning Note - Normal Equation <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -423,7 +441,7 @@ X_{norm} = \frac{x_n-\mu_n}{s_n}</script><p>where</p>
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -436,7 +454,7 @@ X_{norm} = \frac{x_n-\mu_n}{s_n}</script><p>where</p>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -445,13 +463,14 @@ X_{norm} = \frac{x_n-\mu_n}{s_n}</script><p>where</p>
       <span class="links-of-author-item">
         <a href="mailto:bobbyduanwenbo@live.com" title="E-Mail → mailto:bobbyduanwenbo@live.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
-      <span class="links-of-author-item">
-        <a href="https://weibo.com/u/5752222666" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;5752222666" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
-      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
   </div>
 
 
 
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5h3tgn8e38t&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async"></script>
       </div>
         <div class="back-to-top motion-element">
           <i class="fa fa-arrow-up"></i>
