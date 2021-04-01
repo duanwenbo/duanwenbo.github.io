@@ -175,6 +175,58 @@ v=-\alpha·\frac{\partial}{\theta_j}J(\theta_0, \theta_1) + v·momemtum</script>
       </tags>
   </entry>
   <entry>
+    <title>ML Learning Note - polynomial regression and feature scaling</title>
+    <url>/2021/04/01/ML-Learning-Note---polynomial-regression-and-feature-scaling/</url>
+    <content><![CDATA[<h2 id="Linear-Regression-with-multiple-variables"><a href="#Linear-Regression-with-multiple-variables" class="headerlink" title="Linear Regression with multiple variables"></a>Linear Regression with multiple variables</h2><p>It is common to consider more than one features when making a prediction. For example when predicting the price of a house:</p>
+<span id="more"></span>
+<p><img src="/images/L4_multiple_variables.png" width="40%" height="40%" style="margin: 0 auto;"></p>
+<p>Hence more generally <strong>hypothesis function</strong> can be written as:</p>
+<script type="math/tex; mode=display">
+h_\theta(x) = \theta_0+\theta_{1}x_1+\theta_2x_2+\theta_3x_3+...+\theta_nx_n</script><script type="math/tex; mode=display">
+=\theta^Tx</script><p>where <script type="math/tex">\theta</script> is</p>
+<script type="math/tex; mode=display">
+\begin{bmatrix}
+\theta_0\\
+\theta_1\\
+\theta_2\\
+\vdots\\
+\theta_n
+\end{bmatrix}</script><p>Also more generally, <strong>gradient decent algorithm</strong> can be written as:</p>
+<script type="math/tex; mode=display">
+\theta_j := \theta_j-\alpha\frac{1}{m}\sum_{i=1}^{m}[h_\theta(x^{(i)}-y^{(i)})]x_j^{(i)}</script><script type="math/tex; mode=display">
+(simutaneously\ update\ \theta_j\ for\ j=0,...,n)</script><p>However, it also comes with some problem:</p>
+<ul>
+<li>The choice of learning rate <script type="math/tex">\alpha</script> may affect the speed of converge, or even can not converge.</li>
+<li><p>The scale of number of examples and features may affect the speed of algorithm  </p>
+</li>
+<li><p>The common linear regression is a straight line that may can not fit the data well</p>
+</li>
+</ul>
+<h2 id="Feature-Scaling"><a href="#Feature-Scaling" class="headerlink" title="Feature Scaling"></a>Feature Scaling</h2><p>When there is a big magnitude difference between different features in a cost function, it could take a lot of time to iterate to find the converging point, for example:</p>
+<p><img src="/images/L4_feature_scale.png" width="40%" height="40%" style="margin: 0 auto;"></p>
+<p>By using the feature scaling, we aim to scale these different features to a similar range (roughly between -1 to 1). The common method of featuring scaling is mean normalization:</p>
+<h3 id="Mean-normalization"><a href="#Mean-normalization" class="headerlink" title="Mean normalization"></a>Mean normalization</h3><script type="math/tex; mode=display">
+X_{norm} = \frac{x_n-\mu_n}{s_n}</script><p>where</p>
+<ul>
+<li><script type="math/tex">\mu_n</script> is the average value</li>
+<li><script type="math/tex">s_n</script> is the range of the feature (maximum - minimum)</li>
+</ul>
+<h2 id="Polynomial-Regression"><a href="#Polynomial-Regression" class="headerlink" title="Polynomial Regression"></a>Polynomial Regression</h2><p>As just mentioned, the common linear regression is a straight line that may can not fit the data well, some times we need curve to fit the data.</p>
+<p>For example, we may want a quadradic function <script type="math/tex">h_\theta(x) = \theta_0+\theta_1x_1+\theta_2x_2^2</script>. Assuming: <script type="math/tex">x_2=x_2^2</script>, to covert the quadratic function to a linear model which we are more familiar with.</p>
+<p><img src="/images/L4_polynomial.png" width="40%" height="40%" style="margin: 0 auto;"></p>
+<p><strong>Note:</strong> It is obvious that we need to scale the feature in polynomial regression since the features are more different from each other .</p>
+]]></content>
+      <categories>
+        <category>Machine Learning Notes</category>
+      </categories>
+      <tags>
+        <tag>Machine Learning</tag>
+        <tag>Gradient Descent</tag>
+        <tag>feature scaling</tag>
+        <tag>mean normalization</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Start from there</title>
     <url>/2021/03/05/Start-form-there/</url>
     <content><![CDATA[<h1 id="Welcome"><a href="#Welcome" class="headerlink" title="Welcome"></a>Welcome</h1><p>Hope it will be a place to collect all my notes and thoughts<br><span id="more"></span><br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">&quot;hello world&quot;</span>);</span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
