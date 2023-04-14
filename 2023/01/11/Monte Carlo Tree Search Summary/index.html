@@ -31,11 +31,12 @@
 <meta property="og:description" content="Monte Carlo Tree Search Summary">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://p.ipic.vip/6ytu64.png">
+<meta property="og:image" content="https://p.ipic.vip/4c480w.png">
 <meta property="og:image" content="https://p.ipic.vip/khtaiv.png">
 <meta property="og:image" content="https://p.ipic.vip/ofl8kr.png">
 <meta property="og:image" content="https://p.ipic.vip/0ayq44.png">
 <meta property="article:published_time" content="2023-01-11T23:54:22.000Z">
-<meta property="article:modified_time" content="2023-01-11T15:02:26.754Z">
+<meta property="article:modified_time" content="2023-01-25T09:14:47.153Z">
 <meta property="article:author" content="Wenbo Duan">
 <meta property="article:tag" content="Machine Learning">
 <meta property="article:tag" content="Reinforcement Learning">
@@ -140,7 +141,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">12</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">15</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -150,7 +151,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">9</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">10</span></a>
 
   </li>
   </ul>
@@ -274,6 +275,14 @@ UTC(v') = \frac{Q(V')}{N(V')}+c\sqrt{\frac{InN(V)}{N(V')}}</script></li>
 </li>
 <li>Back-propogation:<ul>
 <li>Backup the simulation result through the selected nodes to update their statistics</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://p.ipic.vip/4c480w.png" alt="image-20230125090624166"  /></p>
+<p>Note:</p>
+<ul>
+<li>The UCT score could be treated as two components: The exploitation part and the exploration part<ul>
+<li>In exploitation part: $Q(v)$ is the rewards of all play out that pass the node $v$ , $N(v)$ is the visit count. </li>
 </ul>
 </li>
 </ul>
@@ -477,7 +486,10 @@ r_k,s_k=g_{\theta}(s_{k-1},a_k)</script></li>
     <a href="/2021/10/01/paper/" rel="prev" title="Towards Training Effectiveness in Gradient-Based Meta-Reinforcement Learning">
       <i class="fa fa-chevron-left"></i> Towards Training Effectiveness in Gradient-Based Meta-Reinforcement Learning
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2023/04/14/nested%20dissection/" rel="next" title="Nested Dissection Revisit">
+      Nested Dissection Revisit <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -553,7 +565,7 @@ r_k,s_k=g_{\theta}(s_{k-1},a_k)</script></li>
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -566,7 +578,7 @@ r_k,s_k=g_{\theta}(s_{k-1},a_k)</script></li>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -707,6 +719,19 @@ document.querySelectorAll('.pdfobject-container').forEach(element => {
 </script>
 
 
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'default',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
 
 
   
