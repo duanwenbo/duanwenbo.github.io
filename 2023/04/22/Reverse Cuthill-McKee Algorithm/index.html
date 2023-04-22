@@ -23,22 +23,31 @@
     var CONFIG = {"hostname":"duanwenbo.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="My first academic result which is submitted to AAAI 2022 Student Abstract">
+  <meta name="description" content="OverviewRevisitting the sparse matrix technology.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Towards Training Effectiveness in Gradient-Based Meta-Reinforcement Learning">
-<meta property="og:url" content="http://duanwenbo.github.io/2021/10/01/paper/index.html">
+<meta property="og:title" content="Reverse Cuthill-McKee Algorithm">
+<meta property="og:url" content="http://duanwenbo.github.io/2023/04/22/Reverse%20Cuthill-McKee%20Algorithm/index.html">
 <meta property="og:site_name" content="Bobby&#39;s Blog">
-<meta property="og:description" content="My first academic result which is submitted to AAAI 2022 Student Abstract">
+<meta property="og:description" content="OverviewRevisitting the sparse matrix technology.">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-10-01T20:53:16.000Z">
-<meta property="article:modified_time" content="2021-11-07T22:27:52.000Z">
+<meta property="og:image" content="https://p.ipic.vip/rdm252.png">
+<meta property="og:image" content="https://p.ipic.vip/77uhoy.png">
+<meta property="og:image" content="https://p.ipic.vip/w35gav.png">
+<meta property="og:image" content="https://p.ipic.vip/i3mqrt.png">
+<meta property="og:image" content="https://p.ipic.vip/lif3pd.png">
+<meta property="og:image" content="https://p.ipic.vip/6zuhh7.png">
+<meta property="og:image" content="https://p.ipic.vip/9ifpni.png">
+<meta property="og:image" content="https://p.ipic.vip/qcvh2p.png">
+<meta property="article:published_time" content="2023-04-22T22:54:22.000Z">
+<meta property="article:modified_time" content="2023-04-22T11:40:02.521Z">
 <meta property="article:author" content="Wenbo Duan">
-<meta property="article:tag" content="Machine Learning">
-<meta property="article:tag" content="Reinforcement Learning">
-<meta property="article:tag" content="AAAI 2022 Student">
+<meta property="article:tag" content="Sparse matrix">
+<meta property="article:tag" content="RCM">
+<meta property="article:tag" content="reading">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://p.ipic.vip/rdm252.png">
 
-<link rel="canonical" href="http://duanwenbo.github.io/2021/10/01/paper/">
+<link rel="canonical" href="http://duanwenbo.github.io/2023/04/22/Reverse%20Cuthill-McKee%20Algorithm/">
 
 
 <script id="page-configurations">
@@ -51,7 +60,7 @@
   };
 </script>
 
-  <title>Towards Training Effectiveness in Gradient-Based Meta-Reinforcement Learning | Bobby's Blog</title>
+  <title>Reverse Cuthill-McKee Algorithm | Bobby's Blog</title>
   
 
 
@@ -178,7 +187,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://duanwenbo.github.io/2021/10/01/paper/">
+    <link itemprop="mainEntityOfPage" href="http://duanwenbo.github.io/2023/04/22/Reverse%20Cuthill-McKee%20Algorithm/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -191,7 +200,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Towards Training Effectiveness in Gradient-Based Meta-Reinforcement Learning
+          Reverse Cuthill-McKee Algorithm
         </h1>
 
         <div class="post-meta">
@@ -201,7 +210,7 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2021-10-01 21:53:16" itemprop="dateCreated datePublished" datetime="2021-10-01T21:53:16+01:00">2021-10-01</time>
+              <time title="Created: 2023-04-22 23:54:22" itemprop="dateCreated datePublished" datetime="2023-04-22T23:54:22+01:00">2023-04-22</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -209,7 +218,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Paper-Submission/" itemprop="url" rel="index"><span itemprop="name">Paper Submission</span></a>
+                  <a href="/categories/Reading-Note/" itemprop="url" rel="index"><span itemprop="name">Reading Note</span></a>
                 </span>
             </span>
 
@@ -222,8 +231,8 @@
       </span>
       <span class="post-meta-item-text">Valine: </span>
     
-    <a title="valine" href="/2021/10/01/paper/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/10/01/paper/" itemprop="commentCount"></span>
+    <a title="valine" href="/2023/04/22/Reverse%20Cuthill-McKee%20Algorithm/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2023/04/22/Reverse%20Cuthill-McKee%20Algorithm/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -238,9 +247,74 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>My first academic result which is submitted to AAAI 2022 Student Abstract</p>
-<span id="more"></span>
-<div class="pdfobject-container" data-target="AAAI_2022_Student_Program.pdf" data-height="500px"></div>
+        <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>Revisitting the sparse matrix technology.<br><span id="more"></span></p>
+<h1 id="Reverse-Cuthill-McKee-Algorithm-George-Liu-etc-1981"><a href="#Reverse-Cuthill-McKee-Algorithm-George-Liu-etc-1981" class="headerlink" title="Reverse Cuthill-McKee Algorithm (George, Liu, etc. 1981)"></a>Reverse Cuthill-McKee Algorithm <a target="_blank" rel="noopener" href="http://heath.cs.illinois.edu/courses/cs598mh/george_liu.pdf">(George, Liu, etc. 1981)</a></h1><h2 id="Terminology"><a href="#Terminology" class="headerlink" title="Terminology"></a>Terminology</h2><p>Let A be an $n\times n$ symmetric positive matrixm with entries $a_{ij}$</p>
+<ul>
+<li>$f_i(A)$ denotes the column substrcipt of the first non-zero component in row $i$ of A:<script type="math/tex; mode=display">
+f_i(A) = min\{j|a_{ij}\neq 0\}</script></li>
+<li>$\beta_i(A)$ denotes the <strong>i-th bandwidth</strong> of A:<script type="math/tex; mode=display">
+\beta_i(A) = i -f_i(A)</script></li>
+<li>$\beta(A)$ denotes the <strong>bandwith</strong> of A:<script type="math/tex; mode=display">
+\beta(A) = \max \{\beta_i(A)|1\le i \le n\}</script></li>
+</ul>
+<p><img src="https://p.ipic.vip/rdm252.png" alt="example of $f_i(A) and \beta_i(A)$" style="zoom:60%;" /></p>
+<ul>
+<li><p>$Env(A)$ denotes the <strong>envelop</strong> of A:</p>
+<script type="math/tex; mode=display">
+Env(A) = \{\{i,j\}|0<i-j\le\beta_i(A\}</script></li>
+<li><p><strong>Envelop size</strong> = $|Env(A)|$</p>
+<p><img src="https://p.ipic.vip/77uhoy.png" alt="Illustration of envelope of A" style="zoom:100%;" /></p>
+</li>
+<li><p>$w_i(A)$ denotes the <strong>i-th frontwidth</strong> of A, the number of “active” rows at i-th step:</p>
+<script type="math/tex; mode=display">
+w_i(A) = |\{j>i|\{i,j\}\in Env(A)\}|</script><p><img src="https://p.ipic.vip/w35gav.png" alt="Illustration of the i-th bandwidth and frontwidth" style="zoom:80%;" /></p>
+</li>
+<li><p><strong>Frontwidth</strong> : $w(A) = \max{w_i(A)|1\le i\le n }$</p>
+</li>
+<li><p>Define <strong>Eccentricity</strong> $l(x)$ as the maximum distance that root $x$ could reach within the graph:</p>
+<script type="math/tex; mode=display">
+l(x) = max\{d(x,y)|y\in X\}</script></li>
+<li><p>A node $x\in X$ is said to be a <strong>peripheral</strong> nodes if its <em>eccentricity</em> is equal to the diameter of the graph.</p>
+</li>
+</ul>
+<h2 id="Theorem"><a href="#Theorem" class="headerlink" title="Theorem"></a>Theorem</h2><ul>
+<li><p>The Adjacent set $Adj({x_1,\cdots,x_i})$ shall be referred to as the i-th front of the labelled graph, and its size the i-th frontwidth</p>
+<script type="math/tex; mode=display">
+For\ i<j,\{i,j\}\in Env(A)\ if\ and\ only\ if\ x_j\in Adj(\{x_1,\cdots,x_i\})</script><p><img src="https://p.ipic.vip/i3mqrt.png" alt="Adjacent sets" style="zoom:67%;" /></p>
+<p><img src="https://p.ipic.vip/lif3pd.png" alt="A matrix and its assocaited labelled graph" style="zoom:67%;" /></p>
+</li>
+</ul>
+<h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><h3 id="Discussion"><a href="#Discussion" class="headerlink" title="Discussion"></a>Discussion</h3><ul>
+<li><p><strong>How the bandwidth and envelop of the matrix affects the fill-in ?</strong></p>
+<ul>
+<li><p>When a system of linear equations has a band matrix of coefficients and the system is solved by Guassian elimination, with pivots taken from the diagonal, <strong>all arithmetic is confined to band and no new zero elements are generated outside of the band</strong>.</p>
+</li>
+<li><p><strong>To minimize the bandwidth of the row associated with z, node z should be ordered as soon as possible after y.</strong></p>
+</li>
+<li><p><strong>Greedy policy</strong>: The Cuthill-McKee scheme can be regarded as a method that reduces the bandwidth of a matrix via a local minimization of the $\beta_i$’s. <strong>This suggests that the scheme can be used as a method to reduce the profile/envelope</strong> </p>
+<p><img src="https://p.ipic.vip/6zuhh7.png" alt="bandwidth" style="zoom: 15%;" /></p>
+</li>
+</ul>
+</li>
+<li><p>Why reverse ?</p>
+<ul>
+<li>Reversing the Cuthill-McKee ordering ofren turns out to be much superior to the original ordering in terms of profile reduction, although tha bandwidth remains unchanged.</li>
+</ul>
+</li>
+<li><p><strong>Heuristic searching for peripheral node</strong></p>
+<ul>
+<li>Peripheral node is the ideal starting point in RCM and many other algorithms, while it is expensive to find with the time complexity bound of $O(|X|^2)$. Instead we search the pseudo-peripheral node by iterating in the level strcture of the graph.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Implementation"><a href="#Implementation" class="headerlink" title="Implementation"></a>Implementation</h3><p><strong>RCM algorithm</strong></p>
+<p><img src="https://p.ipic.vip/9ifpni.png" alt="RCM algorithm main function" style="zoom:67%;" /></p>
+<p><strong>Code</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">RCM</span>(<span class="params">G</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    RCM algorithm</span></span><br><span class="line"><span class="string">    :param G: Graph</span></span><br><span class="line"><span class="string">    :return: a list of reordered index</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">single_seach</span>(<span class="params">G</span>):</span></span><br><span class="line">        <span class="comment"># Breadth first search</span></span><br><span class="line">        root = diameter_pair_algo(G)</span><br><span class="line">        que = deque()</span><br><span class="line">        que.append(root)</span><br><span class="line"></span><br><span class="line">        visited = [root]</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> que:</span><br><span class="line">            <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(que)):</span><br><span class="line">                root = que.popleft()</span><br><span class="line">                adjacencies = G.adj[root].keys()</span><br><span class="line">                subsidiaries = [node <span class="keyword">for</span> node <span class="keyword">in</span> adjacencies <span class="keyword">if</span> node <span class="keyword">not</span> <span class="keyword">in</span> visited]</span><br><span class="line">                <span class="keyword">for</span> sub <span class="keyword">in</span> subsidiaries:</span><br><span class="line">                    que.append(sub)</span><br><span class="line">                    visited.append(sub)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> visited[::-<span class="number">1</span>]</span><br><span class="line">    </span><br><span class="line">    reordered = []</span><br><span class="line">    sub_graphes = subGraphs(G)</span><br><span class="line">    <span class="keyword">for</span> sub_graph <span class="keyword">in</span> sub_graphes:</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(<span class="built_in">list</span>(sub_graph.nodes)) &lt;= <span class="number">1</span>:</span><br><span class="line">            reordered += <span class="built_in">list</span>(sub_graph.nodes) </span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            reordered += single_seach(sub_graph)</span><br><span class="line">    <span class="keyword">return</span> reordered</span><br></pre></td></tr></table></figure>
+<p><strong>Finding pseudo-peripheral nodes</strong></p>
+<p><img src="https://p.ipic.vip/qcvh2p.png" alt="Finding pseudo-peripheral nodes" style="zoom:80%;" /></p>
+<p><strong>Code</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">diameter_pair_algo</span>(<span class="params">G</span>) -&gt; <span class="built_in">set</span>:</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    pseudo-peripheral algorithsm (George, Liu, 1994)</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    find one pseudo-diameter pair</span></span><br><span class="line"><span class="string">    :param G: Networkx undirected graph</span></span><br><span class="line"><span class="string">    :return: a pseudo-peripheral vertex</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    s = np.random.choice(G.nodes)</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        level_set_s = level_set_algo(G,s)</span><br><span class="line">        <span class="comment"># choose a node in the last level set of minimum degree</span></span><br><span class="line">        nodes = [(i,G.degree[i]) <span class="keyword">for</span> i <span class="keyword">in</span> level_set_s[-<span class="number">1</span>]]</span><br><span class="line">        t = <span class="built_in">min</span>(nodes, key = <span class="keyword">lambda</span> x: x[<span class="number">1</span>])[<span class="number">0</span>]</span><br><span class="line">        level_set_t = level_set_algo(G,t)</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(level_set_t) &gt; <span class="built_in">len</span>(level_set_s):</span><br><span class="line">            s = t</span><br><span class="line">        <span class="keyword">return</span> t</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -256,7 +330,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link: </strong>
-    <a href="http://duanwenbo.github.io/2021/10/01/paper/" title="Towards Training Effectiveness in Gradient-Based Meta-Reinforcement Learning">http://duanwenbo.github.io/2021/10/01/paper/</a>
+    <a href="http://duanwenbo.github.io/2023/04/22/Reverse%20Cuthill-McKee%20Algorithm/" title="Reverse Cuthill-McKee Algorithm">http://duanwenbo.github.io/2023/04/22/Reverse Cuthill-McKee Algorithm/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -268,9 +342,9 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/Machine-Learning/" rel="tag"><i class="fa fa-tag"></i> Machine Learning</a>
-              <a href="/tags/Reinforcement-Learning/" rel="tag"><i class="fa fa-tag"></i> Reinforcement Learning</a>
-              <a href="/tags/AAAI-2022-Student/" rel="tag"><i class="fa fa-tag"></i> AAAI 2022 Student</a>
+              <a href="/tags/Sparse-matrix/" rel="tag"><i class="fa fa-tag"></i> Sparse matrix</a>
+              <a href="/tags/RCM/" rel="tag"><i class="fa fa-tag"></i> RCM</a>
+              <a href="/tags/reading/" rel="tag"><i class="fa fa-tag"></i> reading</a>
           </div>
 
         
@@ -279,13 +353,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/07/08/Reinfoce/" rel="prev" title="Reinforcement Learning Algorithms Summary">
-      <i class="fa fa-chevron-left"></i> Reinforcement Learning Algorithms Summary
+    <a href="/2023/04/14/nested%20dissection/" rel="prev" title="Nested Dissection Algorithm">
+      <i class="fa fa-chevron-left"></i> Nested Dissection Algorithm
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2023/01/11/Monte%20Carlo%20Tree%20Search%20Summary/" rel="next" title="Monte Carlo Tree Search Summary">
-      Monte Carlo Tree Search Summary <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -345,6 +416,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reverse-Cuthill-McKee-Algorithm-George-Liu-etc-1981"><span class="nav-number"></span> <span class="nav-text">Reverse Cuthill-McKee Algorithm (George, Liu, etc. 1981)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Terminology"><span class="nav-number">1.</span> <span class="nav-text">Terminology</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Theorem"><span class="nav-number">2.</span> <span class="nav-text">Theorem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Algorithm"><span class="nav-number">3.</span> <span class="nav-text">Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Discussion"><span class="nav-number">3.1.</span> <span class="nav-text">Discussion</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Implementation"><span class="nav-number">3.2.</span> <span class="nav-text">Implementation</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
