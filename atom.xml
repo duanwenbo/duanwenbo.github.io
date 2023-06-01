@@ -6,7 +6,7 @@
   <link href="http://duanwenbo.github.io/atom.xml" rel="self"/>
   
   <link href="http://duanwenbo.github.io/"/>
-  <updated>2023-06-01T17:27:15.011Z</updated>
+  <updated>2023-06-01T23:01:18.399Z</updated>
   <id>http://duanwenbo.github.io/</id>
   
   <author>
@@ -17,13 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Common Terminologies in Graph Thoery</title>
+    <link href="http://duanwenbo.github.io/2023/06/01/Common%20Terminologies%20in%20Graph%20Thoery/"/>
+    <id>http://duanwenbo.github.io/2023/06/01/Common%20Terminologies%20in%20Graph%20Thoery/</id>
+    <published>2023-06-01T22:56:22.000Z</published>
+    <updated>2023-06-01T23:01:18.399Z</updated>
+    
+    <content type="html"><![CDATA[<p>A summary of conceptions in Graph Thoery<br><span id="more"></span></p><h1 id="Common-Terminologies-in-Graph-Thoery"><a href="#Common-Terminologies-in-Graph-Thoery" class="headerlink" title="Common Terminologies in Graph Thoery"></a>Common Terminologies in Graph Thoery</h1><p>Define an undirected graph with the natrual order as <script type="math/tex">G = (V,E,\sigma)</script> where <script type="math/tex">V</script> is the set of the vertices, <script type="math/tex">E</script> is the set of edges and <script type="math/tex">\sigma</script> is the natrual ordering.</p><ul><li><p><strong>Chordal graph</strong></p><ul><li>A <strong>chordal</strong> is a path of undirected graph between two non-conescutive vertices. (“shortcut”” between two vertices”)</li><li>A <strong>chordal graph</strong> referes to every cycle of length four or greater of a simple graph has a chord. (triangulated graph)</li></ul></li><li><p><strong>Chordal Completion</strong></p><ul><li>The triangualtion result of an undirected graph, it is a chordal graph</li></ul></li><li><p><strong>Filled Graph</strong></p><ul><li>An undirected graph <script type="math/tex">G</script> is filled graph if  any two higher order neighbours of any vertex in <script type="math/tex">G</script> induce an edge<script type="math/tex; mode=display">w,z\in adj^+(G) \rightarrow \{w,z\}\in E</script></li></ul></li><li><p><strong>Elimination order</strong></p><ul><li>An elimination ordering <script type="math/tex">\sigma</script> is a numbering of the vertices of <script type="math/tex">G</script> from 1 to n.  </li><li>The fill-in <script type="math/tex">F_{\sigma}</script>, caused by the ordering <script type="math/tex">\sigma</script> is the set of edges defined as: <script type="math/tex">F=\{\{w,v\}|w\neq v, \{w,v\}\neq E\}</script></li></ul></li><li><p><strong>Perfect Elimination Order</strong></p><ul><li><script type="math/tex; mode=display">\sigma$$ is perfect if $$F_\sigma=\phi</script></li><li><script type="math/tex">\sigma ^*</script> is the perfect elimination order if <script type="math/tex">G=(V,E,\sigma ^*)</script> is a filled graph. (Eliminate by this order wouldn’t create any new chordal)</li><li>A graph is chordal if and only if it has a perfect elimination order</li></ul></li><li><p><strong>Complete Graph</strong></p><ul><li>A graph is complete if all vertices are pair-wise advanct</li></ul></li></ul><ul><li><p><strong>Clique</strong></p><ul><li>A clique is a subgraph of <script type="math/tex">G</script> that is complete</li></ul></li><li><p><strong>Simplicial Vertex</strong></p><ul><li>A simplicial vertex is one whose neighbours forms a clique  </li></ul></li><li><p><strong>Vertex seperator</strong></p><ul><li>If <script type="math/tex">S</script> is a subset of the vertices: <script type="math/tex">S\in V</script>,  <script type="math/tex">G(V\backslash S)</script> is the subgraph of <script type="math/tex">G</script> induced by <script type="math/tex">S</script>; if <script type="math/tex">G(V\backslash S)</script> is disconnected, <script type="math/tex">S</script> is a separator. </li></ul></li><li><p><strong>Clique Tree</strong></p><ul><li>A clique tree of a graph G = (V,E) is a tree which has the cliques of G as its vertices.</li></ul></li><li><p><strong>Block</strong> (Read more from this <a href="https://epubs.siam.org/doi/abs/10.1137/050643350">paper</a>)</p><ul><li>the set of minimal seperator <script type="math/tex">S\in\triangle(G)</script></li><li>the set of connected componets w.r.t <script type="math/tex">S</script>: <script type="math/tex">\mathcal{C}_G(S)</script></li><li>The component is a full component with S if every vertex of S is adjacent to some vertex of C.</li><li>If <script type="math/tex">C\in\mathcal{C}(S)</script>, <script type="math/tex">(S,C)=S\cup C</script> a block associated with S</li><li>The block is called full if C is a full component associated with S</li></ul></li><li><p><u>The Difference between <em>Minimal</em> and <em>Minimum</em></u></p><blockquote><p>Since the problem of computing minimum triangulations is NP-hard, the related polynomially solvable problem of computing minimal triangulations became interesting, and the first algorithms for it appeared in 1976</p><p>It should be emphasized here that the word “optimal” should not be mistaken to mean “optimum” as in some engineering literature. In terms of a set, “optimal” refers to a set property, whereas “optimum” refers to the size of the set.</p><p>—-Minimal Triangulation of a Graph and Optimal Pivoting Order in a Sparse Matrix <a href="https://www.sciencedirect.com/science/article/pii/0022247X76901827/pdf?md5=fa8e30d90353056d94dbd136e62212b3&amp;pid=1-s2.0-0022247X76901827-main.pdf">(Ohtsuki, etc, 1976)</a></p><p><img src="https://p.ipic.vip/1csmkh.png" alt="image-20230529104044637"></p></blockquote></li><li><p>Block realisation</p></li><li><p>Potential Maximal Clique: a potential maximal clique if there is a minimal triangulation H of G such that Ω is a maximal clique of H.</p></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;A summary of conceptions in Graph Thoery&lt;br&gt;</summary>
+    
+    
+    
+    <category term="Reading Note" scheme="http://duanwenbo.github.io/categories/Reading-Note/"/>
+    
+    
+    <category term="Sparse matrix" scheme="http://duanwenbo.github.io/tags/Sparse-matrix/"/>
+    
+    <category term="Graph Theory" scheme="http://duanwenbo.github.io/tags/Graph-Theory/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Clique seperator</title>
     <link href="http://duanwenbo.github.io/2023/06/01/Decomposition%20by%20Clique%20Seperator/"/>
     <id>http://duanwenbo.github.io/2023/06/01/Decomposition%20by%20Clique%20Seperator/</id>
     <published>2023-06-01T22:54:22.000Z</published>
-    <updated>2023-06-01T17:27:15.011Z</updated>
+    <updated>2023-06-01T22:58:08.467Z</updated>
     
-    <content type="html"><![CDATA[<p>Decomposition by clique seperator<br><span id="more"></span></p><h1 id="Clique-seperator"><a href="#Clique-seperator" class="headerlink" title="Clique seperator"></a>Clique seperator</h1><h2 id="Decomposition-by-clique-seperator-Tarjan-1985"><a href="#Decomposition-by-clique-seperator-Tarjan-1985" class="headerlink" title="Decomposition by clique seperator (Tarjan, 1985)"></a>Decomposition by clique seperator (<a href="https://scholar.google.com/citations?user=lazJixIAAAAJ&amp;hl=zh-CN&amp;oi=sra">Tarjan, 1985</a>)</h2><h3 id="Main-Idea"><a href="#Main-Idea" class="headerlink" title="Main Idea:"></a>Main Idea:</h3><p>Based on the idea of ‘divide and conquer’, this paper proposed an graph decomposition algorithm by finding the clique seperator recursively. The decomposition results in a binary decomposition tree. The author suggested some general ideas to tackle 4 NP-hard problems by ultlizing the binary decomposition tree.</p><h3 id="Preliminaries"><a href="#Preliminaries" class="headerlink" title="Preliminaries"></a>Preliminaries</h3><p><em>Perfect elimination ordering</em>, <em>Clique</em>, <em>Minimal and Minimum ordering</em>, <em>Seperator</em></p><h3 id="Algorithms"><a href="#Algorithms" class="headerlink" title="Algorithms"></a>Algorithms</h3><p><img src="https://p.ipic.vip/c3fqaa.png" alt="Decompistion by clique separator" style="zoom:50%;" /></p><p><a href="https://scholar.google.com/citations?user=lazJixIAAAAJ&amp;hl=zh-CN&amp;oi=sra">Text description</a></p><h3 id="Corollary-If-we-can-find-the-perfect-ordering-on-atoms-then-we-can-find-the-perfect-ordering-on-the-entire-graph"><a href="#Corollary-If-we-can-find-the-perfect-ordering-on-atoms-then-we-can-find-the-perfect-ordering-on-the-entire-graph" class="headerlink" title="Corollary: If we can find the perfect ordering on atoms, then we can find the perfect ordering on the entire graph"></a>Corollary: If we can find the perfect ordering on atoms, then we can find the perfect ordering on the entire graph</h3><p>Proof: </p><p>Let Atoms be $G_i=(V_i, E_i)\ \forall i=1,\cdots,k$. </p><p>We first compute the fill-in $F<em>i$ on $G_i$ produced by $\sigma_i$. Since $G_i’=(V_i, E_i\cup F_i)$ is chordal, so is $G’=(V, E\cup \cup</em>{i=1}^kF_i)$.</p><p>Next, We compute the perfect ordering $\sigma$ on $G’$, the resulted fill-in is the subset of $\cup_{i=1}^kF_i$. Thus, $\sigma$ is minimum if $\sigma_i$ is minimum for all $i$</p><h3 id="Algorithms-to-generate-graph-with-the-perfect-ordering"><a href="#Algorithms-to-generate-graph-with-the-perfect-ordering" class="headerlink" title="Algorithms to generate graph with the perfect ordering"></a>Algorithms to generate graph with the perfect ordering</h3><p><img src="https://p.ipic.vip/zat33a.png" alt="Algorithms to generate graph with the perfect ordering" style="zoom:50%;" /></p>]]></content>
+    <content type="html"><![CDATA[<p>Decomposition by clique seperator<br><span id="more"></span></p><h1 id="Clique-seperator"><a href="#Clique-seperator" class="headerlink" title="Clique seperator"></a>Clique seperator</h1><h2 id="Decomposition-by-clique-seperator-Tarjan-1985"><a href="#Decomposition-by-clique-seperator-Tarjan-1985" class="headerlink" title="Decomposition by clique seperator (Tarjan, 1985)"></a>Decomposition by clique seperator (<a href="https://scholar.google.com/citations?user=lazJixIAAAAJ&amp;hl=zh-CN&amp;oi=sra">Tarjan, 1985</a>)</h2><h3 id="Main-Idea"><a href="#Main-Idea" class="headerlink" title="Main Idea:"></a>Main Idea:</h3><p>Based on the idea of ‘divide and conquer’, this paper proposed an graph decomposition algorithm by finding the clique seperator recursively. The decomposition results in a binary decomposition tree. The author suggested some general ideas to tackle 4 NP-hard problems by ultlizing the binary decomposition tree.</p><h3 id="Preliminaries"><a href="#Preliminaries" class="headerlink" title="Preliminaries"></a>Preliminaries</h3><p><em>Perfect elimination ordering</em>, <em>Clique</em>, <em>Minimal and Minimum ordering</em>, <em>Seperator</em></p><h3 id="Algorithms"><a href="#Algorithms" class="headerlink" title="Algorithms"></a>Algorithms</h3><p><img src="https://p.ipic.vip/c3fqaa.png" alt="Decompistion by clique separator" style="zoom:50%;" /></p><p><a href="https://scholar.google.com/citations?user=lazJixIAAAAJ&amp;hl=zh-CN&amp;oi=sra">Text description</a></p><h3 id="Corollary-If-we-can-find-the-perfect-ordering-on-atoms-then-we-can-find-the-perfect-ordering-on-the-entire-graph"><a href="#Corollary-If-we-can-find-the-perfect-ordering-on-atoms-then-we-can-find-the-perfect-ordering-on-the-entire-graph" class="headerlink" title="Corollary: If we can find the perfect ordering on atoms, then we can find the perfect ordering on the entire graph"></a>Corollary: If we can find the perfect ordering on atoms, then we can find the perfect ordering on the entire graph</h3><p>Proof: </p><p>Let Atoms be $G_i=(V_i, E_i)\ \forall i=1,\cdots,k$. </p><p>We first compute the fill-in <script type="math/tex">F_i</script> on <script type="math/tex">G_i</script> produced by <script type="math/tex">\sigma_i</script>. Since <script type="math/tex">G_i'=(V_i, E_i\cup F_i)</script> is chordal, so is <script type="math/tex">G'=(V, E\cup \cup_{i=1}^kF_i)</script>.</p><p>Next, We compute the perfect ordering $\sigma$ on $G’$, the resulted fill-in is the subset of $\cup_{i=1}^kF_i$. Thus, $\sigma$ is minimum if $\sigma_i$ is minimum for all $i$</p><h3 id="Algorithms-to-generate-graph-with-the-perfect-ordering"><a href="#Algorithms-to-generate-graph-with-the-perfect-ordering" class="headerlink" title="Algorithms to generate graph with the perfect ordering"></a>Algorithms to generate graph with the perfect ordering</h3><p><img src="https://p.ipic.vip/zat33a.png" alt="Algorithms to generate graph with the perfect ordering" style="zoom:50%;" /></p>]]></content>
     
     
     <summary type="html">&lt;p&gt;Decomposition by clique seperator&lt;br&gt;</summary>
@@ -35,9 +58,9 @@
     
     <category term="Sparse matrix" scheme="http://duanwenbo.github.io/tags/Sparse-matrix/"/>
     
-    <category term="Minimum Degree" scheme="http://duanwenbo.github.io/tags/Minimum-Degree/"/>
-    
     <category term="Graph Theory" scheme="http://duanwenbo.github.io/tags/Graph-Theory/"/>
+    
+    <category term="Minimum Degree" scheme="http://duanwenbo.github.io/tags/Minimum-Degree/"/>
     
     <category term="Clique Decomposition" scheme="http://duanwenbo.github.io/tags/Clique-Decomposition/"/>
     
@@ -62,15 +85,15 @@
     
     <category term="Sparse matrix" scheme="http://duanwenbo.github.io/tags/Sparse-matrix/"/>
     
+    <category term="Graph Theory" scheme="http://duanwenbo.github.io/tags/Graph-Theory/"/>
+    
+    <category term="Minimum Degree" scheme="http://duanwenbo.github.io/tags/Minimum-Degree/"/>
+    
     <category term="RCM" scheme="http://duanwenbo.github.io/tags/RCM/"/>
     
     <category term="reading" scheme="http://duanwenbo.github.io/tags/reading/"/>
     
-    <category term="Minimum Degree" scheme="http://duanwenbo.github.io/tags/Minimum-Degree/"/>
-    
     <category term="Nested Dissection" scheme="http://duanwenbo.github.io/tags/Nested-Dissection/"/>
-    
-    <category term="Graph Theory" scheme="http://duanwenbo.github.io/tags/Graph-Theory/"/>
     
   </entry>
   
@@ -93,11 +116,11 @@
     
     <category term="Sparse matrix" scheme="http://duanwenbo.github.io/tags/Sparse-matrix/"/>
     
+    <category term="Graph Theory" scheme="http://duanwenbo.github.io/tags/Graph-Theory/"/>
+    
     <category term="RCM" scheme="http://duanwenbo.github.io/tags/RCM/"/>
     
     <category term="reading" scheme="http://duanwenbo.github.io/tags/reading/"/>
-    
-    <category term="Graph Theory" scheme="http://duanwenbo.github.io/tags/Graph-Theory/"/>
     
   </entry>
   
@@ -120,11 +143,11 @@
     
     <category term="Sparse matrix" scheme="http://duanwenbo.github.io/tags/Sparse-matrix/"/>
     
+    <category term="Graph Theory" scheme="http://duanwenbo.github.io/tags/Graph-Theory/"/>
+    
     <category term="reading" scheme="http://duanwenbo.github.io/tags/reading/"/>
     
     <category term="Nested dissection" scheme="http://duanwenbo.github.io/tags/Nested-dissection/"/>
-    
-    <category term="Graph Theory" scheme="http://duanwenbo.github.io/tags/Graph-Theory/"/>
     
   </entry>
   
@@ -147,9 +170,9 @@
     
     <category term="Machine Learning" scheme="http://duanwenbo.github.io/tags/Machine-Learning/"/>
     
-    <category term="Monte Carlo Tree Search" scheme="http://duanwenbo.github.io/tags/Monte-Carlo-Tree-Search/"/>
-    
     <category term="Reinforcement Learning" scheme="http://duanwenbo.github.io/tags/Reinforcement-Learning/"/>
+    
+    <category term="Monte Carlo Tree Search" scheme="http://duanwenbo.github.io/tags/Monte-Carlo-Tree-Search/"/>
     
   </entry>
   
@@ -224,9 +247,9 @@
     
     <category term="Machine Learning" scheme="http://duanwenbo.github.io/tags/Machine-Learning/"/>
     
-    <category term="Reinforcement Learning" scheme="http://duanwenbo.github.io/tags/Reinforcement-Learning/"/>
-    
     <category term="Markov Decision Process" scheme="http://duanwenbo.github.io/tags/Markov-Decision-Process/"/>
+    
+    <category term="Reinforcement Learning" scheme="http://duanwenbo.github.io/tags/Reinforcement-Learning/"/>
     
   </entry>
   
