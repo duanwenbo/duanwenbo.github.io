@@ -295,6 +295,8 @@ a
     border: 1px solid var(--font-color-0);
 }
 
+
+
 .footer
 {
     padding: 4px 0;
@@ -563,6 +565,14 @@ a
 .header a:hover {
     color:rgb(0, 0, 0);
     text-decoration: underline; 
+}
+
+
+.visitor-statistic
+{
+    width: 100%;
+    margin: 10px 0;
+    align-items: center;
 }
 
 
