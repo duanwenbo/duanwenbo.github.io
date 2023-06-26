@@ -111,10 +111,16 @@ target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=cDYJk0mqiRc
 </ul></li>
 <li><p>复现</p>
 <ul>
-<li><p>子文件包含 git repo,
-将外层父文件夹同名jupyter文件复制进入子文件夹，开始修改。</p></li>
-<li><p>未手动保存, cmd+W 关闭窗口</p></li>
+<li><p>将外层父文件夹同名jupyter文件复制进入子文件夹，开始修改。</p></li>
+<li><p>未手动保存, cmd+W 关闭窗口。</p></li>
+<li><p><u>TIMELINE 功能在开启autosave的情况下未启用</u>，提示 <em>No
+timeline information was provided</em>。</p></li>
 </ul></li>
+</ul>
+<p>解决方法：</p>
+<ul>
+<li>问题只发生在当被复制对象包含大量输出结果时</li>
+<li>清空所有结果输出，自动保存恢复</li>
 </ul>
 <p>总结：</p>
 <ul>
@@ -123,7 +129,7 @@ target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=cDYJk0mqiRc
 <li><p>VS Code 临时备份地址
 <code>~/Library/Application\ Support/Code/Backups</code></p></li>
 <li><p>VS Code 全局搜索 <code>Command + Shift + F</code></p></li>
-<li><p>VS Code 本地记录 <code>Command + Shift + P</code></p></li>
+<li><p>VS Code 本地设置 <code>Command + Shift + P</code></p></li>
 </ul>
 
     </div>

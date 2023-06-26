@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta name="description" content="Quick Notes on SQL" />
+    <meta name="hexo-theme-A4" content="v1.6.9" />
+    <link rel="alternate icon" type="image/webp" href="/img/small.png">
+    <title>Wenbo | Blog</title>
+
+    
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+            
+<link rel="stylesheet" href="/css/waline.css">
+
+        
+    
+    
+<link rel="stylesheet" href="/css/ui.css">
+ 
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+    
+    <body>
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/profile.png" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Wenbo</a> 
+            <span class="description">记上一笔</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">Home</a></li>
+            
+        
+            
+                <li><a href="/list/">Post</a></li>
+            
+        
+            
+                <li><a href="/tags/">Tags</a></li>
+            
+        
+            
+                <li><a href="/categories/">Categories</a></li>
+            
+        
+            
+                <li><a href="/about/">About</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            Quick Notes on SQL
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#concept"><span class="post-toc-text">Concept</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#basic"><span class="post-toc-text">Basic</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#string-function"><span class="post-toc-text">String Function</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#selection"><span class="post-toc-text">Selection</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#crup"><span class="post-toc-text">CRUP</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#data-type-time"><span class="post-toc-text">Data Type (Time)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#logical-operation"><span class="post-toc-text">Logical Operation</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#aggregation"><span class="post-toc-text">Aggregation</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#constrains-alter"><span class="post-toc-text">Constrains &amp; Alter</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#one-2-many"><span class="post-toc-text">One 2 Many</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#view"><span class="post-toc-text">View</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#window-function"><span class="post-toc-text">Window function</span></a></li></ol>
+        
+        <h2 id="concept">Concept</h2>
+<ul>
+<li><p>What is a database?</p>
+<ul>
+<li>A <strong>structured</strong> set of computerized data with
+<strong>accessible interface</strong></li>
+</ul></li>
+<li><p>SQL:</p>
+<ul>
+<li>Structure Query Language (SQL), A standard language used in all
+relational database management system</li>
+</ul></li>
+<li><p>Install the database</p>
+<ul>
+<li><p>Two components:</p>
+<ol type="1">
+<li>MySQL</li>
+<li>SQL workbench</li>
+</ol></li>
+<li><p>Add the mysql to the environment variable</p>
+<pre class="shell"><code>open ~/.zshrc
+## add the mysql bin
+## no spaces around the = 
+export PATH=${PATH}:/usr/local/mysql/bin
+## The save the file
+source ./zshrc</code></pre></li>
+</ul></li>
+<li><p>Hierachy:</p>
+<ul>
+<li>Server -&gt; Multiple database -&gt; Multiple sheets</li>
+</ul></li>
+</ul>
+<h2 id="basic">Basic</h2>
+<ul>
+<li><p><strong>Select, Create, Delete</strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">DATABASE</span> tea_shop;</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">USE</span> tea_shop; </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">DROP</span> <span class="kw">DATABASE</span> tea_shop;</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">-- show current selection</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="kw">database</span>();</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">-- show the whole sever</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>SHOW DATABASES;</span></code></pre></div></li>
+<li><p><strong>Tables</strong></p>
+<ul>
+<li><p>Create: A database is just a bunch of tables (core of the
+relational database)</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> cat (</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    name <span class="dt">VARCHAR</span>(<span class="dv">50</span>),</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    agen <span class="dt">INT</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div></li>
+<li><p>Query: A collection of related data held in a <strong>Structured
+format</strong> within a database</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Remember the current cursor is on the database</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>SHOW <span class="kw">TABLES</span>;</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>SHOW <span class="kw">COLUMNS</span> <span class="kw">FROM</span> tea_shop;</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">-- Describ</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">DESC</span> <span class="op">&lt;</span><span class="kw">table</span> name<span class="op">&gt;</span></span></code></pre></div></li>
+<li><p>Drop:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">DROP</span> <span class="kw">TABLE</span> <span class="op">&lt;</span><span class="kw">table</span> name<span class="op">&gt;</span>;</span></code></pre></div></li>
+<li><p>Insert:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> <span class="op">&lt;</span><span class="kw">table</span> name<span class="op">&gt;</span> (name, age)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">VALUE</span>(<span class="ot">"JACK"</span>, <span class="dv">10</span>); </span></code></pre></div></li>
+</ul></li>
+<li><p>Data Types</p>
+<ul>
+<li>INT, VARCHAR,..</li>
+</ul></li>
+<li><p><strong>Basic Attributes of table</strong></p>
+<ul>
+<li><p><strong>NOT NUlL constrains</strong></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> cat2 (</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  name <span class="dt">VARCHAR</span>(<span class="dv">50</span>) <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  age <span class="dt">INT</span> <span class="kw">NOT</span> <span class="kw">NULL</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div></li>
+<li><p>Tips: Use ' first instead of " to avoid confusion</p></li>
+<li><p><strong>Default Values</strong></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> cats3 (</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    name <span class="dt">VARCHAR</span>(<span class="dv">50</span>) <span class="kw">DEFAULT</span> <span class="st">'unnamed'</span>,</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    age <span class="dt">INT</span> <span class="kw">DEFAULT</span> <span class="dv">99</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>);</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">-- Note: The default setting won't prevent you from inserting the NULL mannually !</span></span></code></pre></div></li>
+<li><p><strong>Key</strong>: We need a unique ID to differentiate the
+rows even though they looks the same.</p>
+<ul>
+<li><p>Primary Key: A unique identifier</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> unique_cats (</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  cats_id <span class="dt">INT</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  name <span class="dt">VARCHAR</span>(<span class="dv">50</span>) <span class="kw">DEFAULT</span> <span class="st">'unnamed'</span>,</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  age <span class="dt">INT</span> <span class="kw">DEFAULT</span> <span class="dv">99</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- alternative way</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> unique_cats (</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  cats_id <span class="dt">INT</span> <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  name <span class="dt">VARCHAR</span>(<span class="dv">50</span>) <span class="kw">DEFAULT</span> <span class="st">'unnamed'</span>,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  age <span class="dt">INT</span> <span class="kw">DEFAULT</span> <span class="dv">99</span>,</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">PRIMARY</span> <span class="kw">KEY</span>(cats_id)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div></li>
+<li><p>Auto increament: Only valid for the primary key column</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>mysql<span class="op">&gt;</span> <span class="kw">CREATE</span> <span class="kw">TABLE</span> unique_cat(</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">-&gt;</span> name VAECHAR(<span class="dv">50</span>) <span class="kw">DEFAULT</span> <span class="st">'unnamed'</span>,</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">-&gt;</span> <span class="kw">id</span> <span class="dt">INT</span> AUTO_INCREMENT,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">-&gt;</span> age <span class="dt">INT</span>,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>      <span class="op">-&gt;</span> <span class="kw">PRIMARY</span> <span class="kw">KEY</span>(<span class="kw">id</span>));</span></code></pre></div>
+<pre class="shell"><code>mysql&gt; DESC unique_cat;
++-------+-------------+------+-----+---------+----------------+
+| Field | Type        | Null | Key | Default | Extra          |
++-------+-------------+------+-----+---------+----------------+
+| name  | varchar(50) | YES  |     | unnamed |                |
+| id    | int         | NO   | PRI | NULL    | auto_increment |
+| age   | int         | YES  |     | NULL    |                |
++-------+-------------+------+-----+---------+----------------+
+3 rows in set (0.01 sec)</code></pre></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="string-function">String Function</h2>
+<ul>
+<li><p><strong>CONCAT() </strong>/ CONCAT_WS (with_seperator):</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">CONCAT</span>(<span class="op">&lt;</span><span class="kw">column</span> name<span class="op">&gt;</span>,<span class="st">' '</span>) <span class="kw">AS</span> new_name <span class="kw">FROM</span> <span class="op">&lt;</span><span class="kw">table</span> name<span class="op">&gt;</span></span></code></pre></div></li>
+<li><p><strong>SUBSTRING()</strong> / SUBSTR()</p>
+<p>Silimiar to the slice operation in Python</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> SUBSTRING(<span class="op">&lt;</span><span class="kw">full</span> string<span class="op">&gt;</span>, <span class="op">&lt;</span><span class="kw">start</span> position<span class="op">&gt;</span>, <span class="op">&lt;</span><span class="cf">end</span> position<span class="op">&gt;</span>)</span></code></pre></div></li>
+<li><p>When nesting the query:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="op">..</span>. your combination</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> <span class="op">&lt;</span><span class="kw">table</span> name<span class="op">&gt;</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co">-- do code beautifier for your co-worker :)</span></span></code></pre></div></li>
+<li><p><strong>REPLACE()</strong></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">REPLACE</span> (<span class="st">'hello world'</span>, <span class="st">'hell'</span>, <span class="st">'*Q#Q*'</span>);</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co">-- Case sensitive</span></span></code></pre></div></li>
+<li><p><strong>REVERSE()</strong></p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> </span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a> <span class="kw">REVERSE</span> (<span class="st">'长恨送年芳'</span>);</span></code></pre></div></li>
+<li><p><strong>CHAR_LENGTH()</strong></p>
+<pre class="shell"><code>## LENGTH mearsures in bits
+mysql&gt; SELECT 
+    -&gt; LENGTH('海豚');
++------------------+
+| LENGTH('海豚')   |
++------------------+
+|                6 |
++------------------+
+1 row in set (0.00 sec)
+
+mysql&gt; SELECT 
+    -&gt; CHAR_LENGTH('海豚');
++-----------------------+
+| CHAR_LENGTH('海豚')   |
++-----------------------+
+|                     2 |
++-----------------------+
+1 row in set (0.00 sec)</code></pre></li>
+<li><p><strong>UPPER</strong>/ UCASE and
+<strong>LOWER</strong>/LCASE</p></li>
+<li><p><strong>INSERT</strong></p></li>
+<li><p><strong>REPEAT</strong></p></li>
+<li><p><strong>TRIM</strong></p>
+<pre class="shell"><code>mysql&gt; SELECT TRIM( TRAILING '.' FROM '..em..' );
++------------------------------------+
+| TRIM( TRAILING '.' FROM '..em..' ) |
++------------------------------------+
+| ..em                               |
++------------------------------------+
+1 row in set (0.00 sec)</code></pre></li>
+</ul>
+<p>Pratice time 🙌</p>
+<ul>
+<li><p>Tips on writting function:</p>
+<ul>
+<li><p>Always following a '(' after the calling function, do not leave
+the space. E.g. This will cause error:</p>
+<pre class="shell"><code>## Error demostration
+mysql&gt; SELECT TRIM (LEADING '.' FROM '...emmm...');
+
+## Instead:
+mysql&gt; SELECT TRIM(LEADING '.' FROM '...emmm...');
++-------------------------------------+
+| TRIM(LEADING '.' FROM '...emmm...') |
++-------------------------------------+
+| emmm...                             |
++-------------------------------------+
+1 row in set (0.00 sec)</code></pre></li>
+<li><p>Put the Aliases name in to ' ' although the single word without
+quotation marks can be encoded correctly</p></li>
+</ul></li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html">Function
+Cheatsheet</a></p>
+<h3 id="selection">Selection</h3>
+<ul>
+<li><p>select distinct elements</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="kw">DISTINCT</span> <span class="op">&lt;</span><span class="kw">column</span> name<span class="op">&gt;</span> <span class="kw">FROM</span> <span class="op">&lt;</span><span class="kw">table</span> name<span class="op">&gt;</span>;</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co">-- DISTINCT Applies to all following keys</span></span></code></pre></div></li>
+<li><p>ORDER BY</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>SELSELECT DISTINC author_lname, author_fname <span class="kw">FROM</span> books <span class="kw">ORDER</span> <span class="kw">BY</span> author_lname <span class="kw">DESC</span>;</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="co">-- ORDER BY 2 (2nd selected columns)</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="co">-- ORDER BY author_lname, author_fname</span></span></code></pre></div></li>
+<li><p>LIMIT: limit the number of query return</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> DISTINC author_lname, author_fname <span class="kw">FROM</span> books <span class="kw">ORDER</span> <span class="kw">BY</span> author_lname <span class="kw">DESC</span> </span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="kw">LIMIT</span> <span class="dv">5</span>,<span class="dv">10</span>;</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="co">-- LIMITE from 5 to 10th row</span></span></code></pre></div></li>
+<li><p>SEARCH: searching the characture</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> title, author_lname <span class="kw">FROM</span> books</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> author_lname <span class="kw">LIKE</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="ot">"%da%"</span>;</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="co">-- r'%'' is equivlent to r'.*' in regular expression</span></span></code></pre></div>
+<pre><code>SQL search cheatsheet
+
+% == .*
+_ == .
+' == $ (at the end of the string)
+\ == \ (转义)</code></pre></li>
+</ul>
+<p>Pratice time 🙌</p>
+<ul>
+<li><p>Tips:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">&lt;</span>colum name<span class="op">&gt;</span> <span class="kw">AS</span> another_name <span class="kw">FROM</span> books</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="co">-- AS goes first before FROM</span></span></code></pre></div></li>
+</ul>
+<h2 id="crup">CRUP</h2>
+<ul>
+<li><p><strong>CRUD</strong>: Create, Read, Update, Delete</p></li>
+<li><p>Read:</p>
+<ul>
+<li><p>Conditional Statement: <strong>WHERER</strong></p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">&lt;</span><span class="kw">column</span> name<span class="op">&gt;</span>, <span class="op">&lt;</span><span class="kw">column</span> name<span class="op">&gt;</span> </span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> <span class="op">&lt;</span><span class="kw">table</span> name<span class="op">&gt;</span> </span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> <span class="op">&lt;</span>BOOL expression<span class="op">&gt;</span>;    </span></code></pre></div></li>
+<li><p>Aliases Statement: <strong>AS</strong>, Temporary only for this
+query</p>
+<pre class="shell"><code>mysql&gt;  SELECT name AS kettyname FROM cats;
++----------------+
+| kettyname      |
++----------------+
+| Ringo          |
+| Cindy          |
+| Dumbledore     |
+| Egg            |
+| Misty          |
+| George Michael |
+| Jackson        |
++----------------+</code></pre></li>
+</ul></li>
+<li><p>Update:</p>
+<ul>
+<li><p>Always from a table prospect using the SQL</p></li>
+<li><div class="sourceCode" id="cb29"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">UPDATE</span> <span class="op">&lt;</span>able name<span class="op">&gt;</span> <span class="kw">SET</span> <span class="op">&lt;</span>cloumn name<span class="op">&gt;</span> <span class="op">=</span> <span class="op">&lt;</span><span class="fu">value</span><span class="op">&gt;</span> <span class="kw">WHERE</span> <span class="op">..</span>.</span></code></pre></div></li>
+<li><p>Rule of 👍: Try selecting before update. Make sure your target is
+correct.</p></li>
+<li><p>Notice the data type when amending.</p></li>
+</ul></li>
+<li><p>Delete (Destroy:/ ):</p>
+<ul>
+<li><div class="sourceCode" id="cb30"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">DELETE</span> <span class="kw">FROM</span> <span class="op">&lt;</span><span class="kw">table</span> name<span class="op">&gt;</span> <span class="kw">WHERE</span> <span class="op">..</span></span></code></pre></div></li>
+<li>Notice the difference from DROP: DELETE will at least leave an empty
+set.</li>
+<li>Try Selecting before as well.</li>
+</ul></li>
+</ul>
+<p>Pratice time 🙌</p>
+<ul>
+<li><p>Leave enough space when naming each column. If not:</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- modify the attributes of column</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="kw">ALTER</span> <span class="op">&lt;</span><span class="kw">table</span> name<span class="op">&gt;</span> <span class="kw">MODIFY</span> <span class="kw">COLUMN</span> <span class="op">&lt;</span><span class="kw">column</span> name<span class="op">&gt;</span> <span class="op">&lt;</span><span class="kw">new</span> <span class="kw">data</span> <span class="kw">type</span><span class="op">&gt;</span></span></code></pre></div></li>
+<li><p>The PRIMARY KEY setting will set NOT NULL by default</p></li>
+</ul>
+<h2 id="data-type-time">Data Type (Time)</h2>
+<ul>
+<li><p>Text</p></li>
+<li><p>Decimal <code>DECIMAL(5,2)</code></p></li>
+<li><p>FLoat</p></li>
+<li><p>DATE: <code>YYYY-MM-DD</code></p></li>
+<li><p>TIME: <code>hh:mm:ss</code></p></li>
+<li><p>DATETIME: <code>YYYY-MM-DD hh:mm:ss</code></p></li>
+<li><p>CURDATE / CURTIME / NOW</p></li>
+<li><p><code>IFNULL(&lt;column name&gt;, replacement)</code></p></li>
+<li><p>Time Stamp : Similar to datetime by only supports much smaller
+range</p></li>
+<li><p><strong>On update</strong>: one more extra</p>
+<pre class="shell"><code>mysql&gt; DESC caption;
++-----------+--------------+------+-----+-------------------+-----------------------------+
+| Field     | Type         | Null | Key | Default           | Extra                       |
++-----------+--------------+------+-----+-------------------+-----------------------------+
+| text      | varchar(200) | YES  |     | NULL              |                             |
+| create_at | timestamp    | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED           |
+| update_at | timestamp    | YES  |     | NULL              | on update CURRENT_TIMESTAMP |
++-----------+--------------+------+-----+-------------------+-----------------------------+
+
+
+mysql&gt; INSERT INTO caption (text) VALUES('hello');
+Query OK, 1 row affected (0.00 sec)
+
+mysql&gt; SELECT * FROM caption;
++-------+---------------------+-----------+
+| text  | create_at           | update_at |
++-------+---------------------+-----------+
+| hello | 2023-06-16 14:38:47 | NULL      |
++-------+---------------------+-----------+
+
+
+mysql&gt; UPDATE caption SET text = 'hello!!';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql&gt; SELECT * FROM caption;
++---------+---------------------+---------------------+
+| text    | create_at           | update_at           |
++---------+---------------------+---------------------+
+| hello!! | 2023-06-16 14:38:47 | 2023-06-16 14:39:37 |
++---------+---------------------+---------------------+
+</code></pre></li>
+<li><p>Change the format of time:</p>
+<ul>
+<li><p><strong>DATE_FORMAT</strong></p>
+<pre class="shell"><code>mysql&gt;  SELECT DATE_FORMAT(NOW(), '%d-%m-%Y');
++--------------------------------+
+| DATE_FORMAT(NOW(), '%d-%m-%Y') |
++--------------------------------+
+| 16-06-2023                     |
++--------------------------------+</code></pre></li>
+<li><p><a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html">format
+Ref</a></p></li>
+</ul></li>
+</ul>
+<h2 id="logical-operation">Logical Operation</h2>
+<ul>
+<li><p>Not equal <code>!=</code></p></li>
+<li><p>Not like <code>NOT LIKE</code></p></li>
+<li><p>Greater than <code>&gt;</code></p></li>
+<li><p>AND <code>AND</code></p></li>
+<li><p>OR <code>OR</code></p></li>
+<li><p>BETWEEN <code>BETWEEN .. AND ...</code></p></li>
+<li><p>IN <code>IN:</code>(NOT IN as well)</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> author_lname <span class="kw">IN</span> (<span class="st">'Bobby'</span>, <span class="st">'Baobi'</span>, <span class="st">'Buobi'</span>)</span></code></pre></div></li>
+<li><p>CASE STATMENT</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> title, released_year,</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="cf">CASE</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">WHEN</span> released_year <span class="op">&gt;=</span> <span class="dv">2000</span> <span class="cf">THEN</span> <span class="st">'Morden lit'</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">WHEN</span> <span class="op">..</span> <span class="cf">THEN</span> <span class="op">..</span> ,</span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">WHEN</span> <span class="op">..</span> <span class="cf">THEN</span> <span class="op">..</span> ,</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">ELSE</span> <span class="op">..</span> ,</span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="cf">END</span> <span class="kw">AS</span> <span class="op">..</span></span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> books;</span></code></pre></div></li>
+<li><p><code>IS NULL</code></p></li>
+</ul>
+<h2 id="aggregation">Aggregation</h2>
+<ul>
+<li><p>Count</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">COUNT</span>(author_laname) <span class="kw">FROM</span> books</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="co">-- COUNT(*) has only_form_by_whole_group attribute</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="co">-- COUNT omits the NULL values</span></span></code></pre></div></li>
+<li><p><strong>Group By</strong> (the result is like clustering)#</p>
+<pre class="shell"><code>mysql&gt; SELECT COUNT(*) FROM books GROUP BY author_lname;
++----------+
+| COUNT(*) |
++----------+
+|        2 |
+|        3 |
+|        3 |
+|        1 |
+|        1 |
+|        2 |
+|        1 |
+|        1 |
+|        2 |
+|        2 |
+|        1 |
++----------+
+11 rows in set (0.00 sec)
+
+mysql&gt; SELECT COUNT(*) FROM books;
++----------+
+| COUNT(*) |
++----------+
+|       19 |
++----------+
+1 row in set (0.00 sec)
+
+mysql&gt; SELECT * FROM books GROUP BY author_lname;
+ERROR 1055 (42000): Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'book_shop.books.book_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+
+mysql&gt; SELECT author_lname FROM books GROUP BY author_lname;
++----------------+
+| author_lname   |
++----------------+
+| Lahiri         |
+| Gaiman         |
+| Eggers         |
+| Chabon         |
+| Smith          |
+| Carver         |
+| DeLillo        |
+| Steinbeck      |
+| Foster Wallace |
+| Harris         |
+| Saunders       |
++----------------+
+11 rows in set (0.00 sec)
+
+# notice how * refers to different targets when using GROUP BY
+
+
+mysql&gt; SELECT CONCAT(author_lname,' ',author_fname) AS author FROM books GROUP BY author;
++----------------------+
+| author               |
++----------------------+
+| Lahiri Jhumpa        |
+| Gaiman Neil          |
+| Eggers Dave          |
+| Chabon Michael       |
+| Smith Patti          |
+| Carver Raymond       |
+| DeLillo Don          |
+| Steinbeck John       |
+| Foster Wallace David |
+| Harris Dan           |
+| Harris Freida        |
+| Saunders George      |
++----------------------+
+12 rows in set (0.00 sec)</code></pre></li>
+<li><p>MIN/MAX</p></li>
+<li><p>Sub query</p>
+<pre class="shell"><code>mysql&gt; SELECT title, pages FROM books WHERE pages=(SELECT MAX(pages) FROM books);
++-------------------------------------------+-------+
+| title                                     | pages |
++-------------------------------------------+-------+
+| The Amazing Adventures of Kavalier &amp; Clay |   634 |
++-------------------------------------------+-------+
+1 row in set (0.00 sec)</code></pre></li>
+<li><p>Group BY + MIN/Max</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>## <span class="kw">Not</span> working :(</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>mysql<span class="op">&gt;</span> <span class="kw">SELECT</span> author_lname, released_year </span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">-&gt;</span> <span class="kw">FROM</span> books</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">-&gt;</span> <span class="kw">GROUP</span> <span class="kw">BY</span> author_lname;</span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>ERROR <span class="dv">1055</span> (<span class="dv">42000</span>): Expression #<span class="dv">2</span> <span class="kw">of</span> <span class="kw">SELECT</span> <span class="kw">list</span> <span class="kw">is</span> <span class="kw">not</span> <span class="kw">in</span> <span class="kw">GROUP</span> <span class="kw">BY</span> clause <span class="kw">and</span> <span class="kw">contains</span> nonaggregated <span class="kw">column</span> <span class="st">'book_shop.books.released_year'</span> which <span class="kw">is</span> <span class="kw">not</span> functionally dependent <span class="kw">on</span> <span class="kw">columns</span> <span class="kw">in</span> <span class="kw">GROUP</span> <span class="kw">BY</span> clause; this <span class="kw">is</span> incompatible <span class="kw">with</span> sql_mode<span class="op">=</span>only_full_group_by</span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>## working :)</span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>mysql<span class="op">&gt;</span> <span class="kw">SELECT</span> author_lname, <span class="fu">MIN</span>(released_year)</span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">-&gt;</span> <span class="kw">FROM</span> books</span>
+<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">-&gt;</span> <span class="kw">GROUP</span> <span class="kw">BY</span> author_lname;</span>
+<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a><span class="op">+</span><span class="co">----------------+--------------------+</span></span>
+<span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a>| author_lname   | <span class="fu">MIN</span>(released_year) |</span>
+<span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a><span class="op">+</span><span class="co">----------------+--------------------+</span></span>
+<span id="cb39-15"><a href="#cb39-15" aria-hidden="true" tabindex="-1"></a>| Lahiri         |               <span class="dv">1996</span> |</span>
+<span id="cb39-16"><a href="#cb39-16" aria-hidden="true" tabindex="-1"></a>| Gaiman         |               <span class="dv">2001</span> |</span>
+<span id="cb39-17"><a href="#cb39-17" aria-hidden="true" tabindex="-1"></a>| Eggers         |               <span class="dv">2001</span> |</span>
+<span id="cb39-18"><a href="#cb39-18" aria-hidden="true" tabindex="-1"></a>| Chabon         |               <span class="dv">2000</span> |</span>
+<span id="cb39-19"><a href="#cb39-19" aria-hidden="true" tabindex="-1"></a>| Smith          |               <span class="dv">2010</span> |</span>
+<span id="cb39-20"><a href="#cb39-20" aria-hidden="true" tabindex="-1"></a>| Carver         |               <span class="dv">1981</span> |</span>
+<span id="cb39-21"><a href="#cb39-21" aria-hidden="true" tabindex="-1"></a>| DeLillo        |               <span class="dv">1985</span> |</span>
+<span id="cb39-22"><a href="#cb39-22" aria-hidden="true" tabindex="-1"></a>| Steinbeck      |               <span class="dv">1945</span> |</span>
+<span id="cb39-23"><a href="#cb39-23" aria-hidden="true" tabindex="-1"></a>| Foster Wallace |               <span class="dv">2004</span> |</span>
+<span id="cb39-24"><a href="#cb39-24" aria-hidden="true" tabindex="-1"></a>| Harris         |               <span class="dv">2001</span> |</span>
+<span id="cb39-25"><a href="#cb39-25" aria-hidden="true" tabindex="-1"></a>| Saunders       |               <span class="dv">2017</span> |</span>
+<span id="cb39-26"><a href="#cb39-26" aria-hidden="true" tabindex="-1"></a><span class="op">+</span><span class="co">----------------+--------------------+</span></span>
+<span id="cb39-27"><a href="#cb39-27" aria-hidden="true" tabindex="-1"></a><span class="dv">11</span> <span class="kw">rows</span> <span class="kw">in</span> <span class="kw">set</span> (<span class="fl">0.00</span> sec)</span></code></pre></div></li>
+<li><p>Notice the concept of <strong>Aggregation Function</strong>,
+Group By only works with the aggregation functions
+(MIN/MAX/SUM/AVG)</p></li>
+</ul>
+<p>Reference:
+https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html</p>
+<h2 id="constrains-alter">Constrains &amp; Alter</h2>
+<ul>
+<li><p>Unique</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> contacts (</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>  Name <span class="dt">VARCHAR</span>(<span class="dv">150</span>) <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>  Phone <span class="dt">VARCHAR</span>(<span class="dv">12</span>) <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">UNIQUE</span></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div>
+<pre class="shell"><code>mysql&gt; DESC contacts;
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| Name  | varchar(150) | NO   |     | NULL    |       |
+| Phone | varchar(12)  | NO   | PRI | NULL    |       |
++-------+--------------+------+-----+---------+-------+</code></pre></li>
+<li><p>Check / Constrains</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> partiers (</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>  Name <span class="dt">VARCHAR</span>(<span class="dv">150</span>) <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>  Age <span class="dt">INT</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">CHECK</span> (age <span class="op">&gt;</span> <span class="dv">18</span>)</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>);</span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a><span class="co">-- Equivlent</span></span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> partiers (</span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>  Name <span class="dt">VARCHAR</span>(<span class="dv">150</span>) <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a>  Age <span class="dt">INT</span> <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">CONSTRAINT</span> adult_check <span class="kw">CHECK</span> (Age <span class="op">&gt;</span> <span class="dv">18</span>)</span>
+<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a>  );</span></code></pre></div></li>
+<li><p>Multi-column Constrains</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> companies (</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>  name <span class="dt">VARCHAR</span>(<span class="dv">150</span>) <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>  address <span class="dt">VARCHAR</span>(<span class="dv">300</span>) <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">CONSTRAINT</span> name_address <span class="kw">UNIQUE</span>(name, address)</span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div></li>
+<li><p>ALL in one place to change the attribute of the table: ALTER</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Add a column</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="kw">ALTER</span> <span class="kw">TABLE</span> companies</span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="kw">ADD</span> <span class="kw">COLUMN</span> <span class="kw">type</span> <span class="dt">VARCHAR</span>(<span class="dv">50</span>) <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">DEFAULT</span> <span class="st">'Ltd'</span>;</span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a><span class="co">-- Drop a column</span></span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a><span class="kw">ALTER</span> <span class="kw">TABLE</span> companies</span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a><span class="kw">DROP</span> <span class="kw">COLUMN</span> <span class="kw">type</span> <span class="dt">VARCHAR</span>(<span class="dv">50</span>) <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">DEFAULT</span> <span class="st">'Ltd'</span>;</span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a><span class="co">-- Rename a table</span></span>
+<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a><span class="kw">ALTER</span> <span class="kw">TABLE</span> companies</span>
+<span id="cb44-11"><a href="#cb44-11" aria-hidden="true" tabindex="-1"></a><span class="kw">RENAME</span> <span class="kw">TO</span> <span class="st">''</span>suppliers</span>
+<span id="cb44-12"><a href="#cb44-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-13"><a href="#cb44-13" aria-hidden="true" tabindex="-1"></a><span class="co">-- Rename a column</span></span>
+<span id="cb44-14"><a href="#cb44-14" aria-hidden="true" tabindex="-1"></a><span class="kw">ALTER</span> <span class="kw">TABLE</span> companies</span>
+<span id="cb44-15"><a href="#cb44-15" aria-hidden="true" tabindex="-1"></a><span class="kw">RENAME</span> <span class="kw">COLUMN</span> <span class="kw">type</span> <span class="kw">TO</span> Categories</span>
+<span id="cb44-16"><a href="#cb44-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-17"><a href="#cb44-17" aria-hidden="true" tabindex="-1"></a><span class="co">-- Modify the existing column</span></span>
+<span id="cb44-18"><a href="#cb44-18" aria-hidden="true" tabindex="-1"></a><span class="kw">ALTER</span> <span class="kw">TABLE</span> companies</span>
+<span id="cb44-19"><a href="#cb44-19" aria-hidden="true" tabindex="-1"></a><span class="kw">MODIFY</span> <span class="kw">COLUMN</span> <span class="op">&lt;</span><span class="kw">new</span> <span class="kw">constraint</span><span class="op">&gt;</span></span></code></pre></div></li>
+<li><p>Tips: Check all constraints</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> USER_CONSTRAINTS</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="co">-- It will return all constraints in the selected database</span></span></code></pre></div></li>
+<li></li>
+</ul>
+<h2 id="one-2-many">One 2 Many</h2>
+<ul>
+<li><p>How to manage the data ? by relationship:</p>
+<ul>
+<li><strong>One to one relationship</strong>
+<ul>
+<li>table 1: basic info of customers | table2: details of customers |
+customer as the key</li>
+</ul></li>
+<li>**One to Many relationship (*)**
+<ul>
+<li>One book to many of reviews</li>
+</ul></li>
+<li><strong>Many to many relationship</strong>
+<ul>
+<li>Books and authors: books can have multiple authors, the author can
+also have many books</li>
+</ul></li>
+</ul></li>
+<li><p><strong>One to many</strong>: Take customers and orders for
+example:</p></li>
+<li><p><img src="https://p.ipic.vip/wbh0re.png" alt="customer-order exmaple" style="zoom: 25%;"></p>
+<ul>
+<li><p><strong>Primary Key</strong>: Some particular column that always
+unique</p></li>
+<li><p><strong>Foreign Key</strong>: Reference to other table</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="co">-- how to use foreign key to link two tables?</span></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="co">-- table 1</span></span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> customers (</span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a><span class="kw">id</span> <span class="dt">INT</span> <span class="kw">PRIMARY</span> <span class="kw">KEY</span> AUTO_INCREMENT,</span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a>first_name <span class="dt">VARCHAR</span>(<span class="dv">50</span>),</span>
+<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a>last_name <span class="dt">VARCHAR</span>(<span class="dv">50</span>),</span>
+<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a>email <span class="dt">VARCHAR</span>(<span class="dv">50</span>) <span class="kw">UNIQUE</span>);</span>
+<span id="cb46-10"><a href="#cb46-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-11"><a href="#cb46-11" aria-hidden="true" tabindex="-1"></a><span class="co">-- table 2</span></span>
+<span id="cb46-12"><a href="#cb46-12" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> orders(</span>
+<span id="cb46-13"><a href="#cb46-13" aria-hidden="true" tabindex="-1"></a><span class="kw">id</span> <span class="dt">INT</span> <span class="kw">PRIMARY</span> <span class="kw">KEY</span> AUTO_INCREMENT,</span>
+<span id="cb46-14"><a href="#cb46-14" aria-hidden="true" tabindex="-1"></a>order_date <span class="dt">DATE</span>,DES</span>
+<span id="cb46-15"><a href="#cb46-15" aria-hidden="true" tabindex="-1"></a>customer_id <span class="dt">INT</span>,</span>
+<span id="cb46-16"><a href="#cb46-16" aria-hidden="true" tabindex="-1"></a><span class="kw">FOREIGN</span> <span class="kw">KEY</span> (customer_id) <span class="kw">REFERENCES</span> customers(<span class="kw">id</span>)</span>
+<span id="cb46-17"><a href="#cb46-17" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div></li>
+<li><p>Cross Join: dummy emmumerated combination of two table</p></li>
+<li><p>Inner Join:</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> customers  </span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> orders <span class="kw">on</span> orders.customer_id <span class="op">=</span> customers.<span class="kw">id</span>;</span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>mysql<span class="op">&gt;</span> <span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> customers  <span class="kw">JOIN</span> orders <span class="kw">on</span> orders.customer_id <span class="op">=</span> customers.<span class="kw">id</span>;</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="op">+</span><span class="co">----+------------+-----------+------------------+----+------------+--------+-------------+</span></span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>| <span class="kw">id</span> | first_name | last_name | email            | <span class="kw">id</span> | order_date | amount | customer_id |</span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a><span class="op">+</span><span class="co">----+------------+-----------+------------------+----+------------+--------+-------------+</span></span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>|  <span class="dv">1</span> | Boy        | George    | george@gmail.com |  <span class="dv">1</span> | <span class="dv">2016</span><span class="op">-</span><span class="dv">02</span><span class="op">-</span><span class="dv">10</span> |  <span class="fl">99.99</span> |           <span class="dv">1</span> |</span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a>|  <span class="dv">1</span> | Boy        | George    | george@gmail.com |  <span class="dv">2</span> | <span class="dv">2017</span><span class="op">-</span><span class="dv">11</span><span class="op">-</span><span class="dv">11</span> |  <span class="fl">35.50</span> |           <span class="dv">1</span> |</span>
+<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a>|  <span class="dv">2</span> | George     | Michael   | gm@gmail.com     |  <span class="dv">3</span> | <span class="dv">2014</span><span class="op">-</span><span class="dv">12</span><span class="op">-</span><span class="dv">12</span> | <span class="fl">800.67</span> |           <span class="dv">2</span> |</span>
+<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a>|  <span class="dv">2</span> | George     | Michael   | gm@gmail.com     |  <span class="dv">4</span> | <span class="dv">2015</span><span class="op">-</span><span class="dv">01</span><span class="op">-</span><span class="dv">03</span> |  <span class="fl">12.50</span> |           <span class="dv">2</span> |</span>
+<span id="cb48-9"><a href="#cb48-9" aria-hidden="true" tabindex="-1"></a>|  <span class="dv">5</span> | Bette      | Davis     | bette@aol.com    |  <span class="dv">5</span> | <span class="dv">1999</span><span class="op">-</span><span class="dv">04</span><span class="op">-</span><span class="dv">11</span> | <span class="fl">450.25</span> |           <span class="dv">5</span> |</span>
+<span id="cb48-10"><a href="#cb48-10" aria-hidden="true" tabindex="-1"></a><span class="op">+</span><span class="co">----+------------+-----------+------------------+----+------------+--------+-------------+</span></span>
+<span id="cb48-11"><a href="#cb48-11" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="kw">rows</span> <span class="kw">in</span> <span class="kw">set</span> (<span class="fl">0.00</span> sec)</span></code></pre></div></li>
+<li><p>Left Join / Right join:</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> customers  </span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="kw">LEFT</span> <span class="kw">JOIN</span> orders <span class="kw">on</span> orders.customer_id <span class="op">=</span> customers.<span class="kw">id</span>;</span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>mysql<span class="op">&gt;</span> <span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> customers <span class="kw">LEFT</span> <span class="kw">JOIN</span> orders <span class="kw">on</span> orders.customer_id <span class="op">=</span> customers.<span class="kw">id</span>;</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="op">+</span><span class="co">----+------------+-----------+------------------+------+------------+--------+-------------+</span></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>| <span class="kw">id</span> | first_name | last_name | email            | <span class="kw">id</span>   | order_date | amount | customer_id |</span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a><span class="op">+</span><span class="co">----+------------+-----------+------------------+------+------------+--------+-------------+</span></span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>|  <span class="dv">1</span> | Boy        | George    | george@gmail.com |    <span class="dv">1</span> | <span class="dv">2016</span><span class="op">-</span><span class="dv">02</span><span class="op">-</span><span class="dv">10</span> |  <span class="fl">99.99</span> |           <span class="dv">1</span> |</span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>|  <span class="dv">1</span> | Boy        | George    | george@gmail.com |    <span class="dv">2</span> | <span class="dv">2017</span><span class="op">-</span><span class="dv">11</span><span class="op">-</span><span class="dv">11</span> |  <span class="fl">35.50</span> |           <span class="dv">1</span> |</span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>|  <span class="dv">2</span> | George     | Michael   | gm@gmail.com     |    <span class="dv">3</span> | <span class="dv">2014</span><span class="op">-</span><span class="dv">12</span><span class="op">-</span><span class="dv">12</span> | <span class="fl">800.67</span> |           <span class="dv">2</span> |</span>
+<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a>|  <span class="dv">2</span> | George     | Michael   | gm@gmail.com     |    <span class="dv">4</span> | <span class="dv">2015</span><span class="op">-</span><span class="dv">01</span><span class="op">-</span><span class="dv">03</span> |  <span class="fl">12.50</span> |           <span class="dv">2</span> |</span>
+<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a>|  <span class="dv">3</span> | David      | Bowie     | david@gmail.com  | <span class="kw">NULL</span> | <span class="kw">NULL</span>       |   <span class="kw">NULL</span> |        <span class="kw">NULL</span> |</span>
+<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a>|  <span class="dv">4</span> | Blue       | Steele    | blue@gmail.com   | <span class="kw">NULL</span> | <span class="kw">NULL</span>       |   <span class="kw">NULL</span> |        <span class="kw">NULL</span> |</span>
+<span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a>|  <span class="dv">5</span> | Bette      | Davis     | bette@aol.com    |    <span class="dv">5</span> | <span class="dv">1999</span><span class="op">-</span><span class="dv">04</span><span class="op">-</span><span class="dv">11</span> | <span class="fl">450.25</span> |           <span class="dv">5</span> |</span>
+<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a><span class="op">+</span><span class="co">----+------------+-----------+------------------+------+------------+--------+-------------+</span></span>
+<span id="cb50-13"><a href="#cb50-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-14"><a href="#cb50-14" aria-hidden="true" tabindex="-1"></a># Notice <span class="kw">some</span> customer doesn<span class="st">'t have order info but still be merged into the new table</span></span></code></pre></div></li>
+<li><p>Delete with the foriegn key constraints</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- table 2</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> orders(</span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="kw">id</span> <span class="dt">INT</span> <span class="kw">PRIMARY</span> <span class="kw">KEY</span> AUTO_INCREMENT,</span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>order_date <span class="dt">DATE</span>,DES</span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>customer_id <span class="dt">INT</span>,</span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a><span class="kw">FOREIGN</span> <span class="kw">KEY</span> (customer_id) <span class="kw">REFERENCES</span> customers(<span class="kw">id</span>) <span class="kw">ON</span> <span class="kw">DELETE</span> CASECADE</span>
+<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div></li>
+</ul></li>
+</ul>
+<h2 id="view">View</h2>
+<ul>
+<li><p>VIEWS</p>
+<ul>
+<li>Creating a cache table</li>
+</ul>
+<div class="sourceCode" id="cb52"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">VIEW</span> new_list <span class="kw">AS</span> </span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">..</span>.</span></code></pre></div>
+<ul>
+<li>Can &amp; Can't
+<ul>
+<li>can't: Join, Update (Depend on the view table type )</li>
+</ul></li>
+<li>Over-write to correct</li>
+</ul>
+<div class="sourceCode" id="cb53"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">OR</span> <span class="kw">REPLACE</span> <span class="kw">VIEW</span> <span class="op">..</span>.</span></code></pre></div></li>
+<li><p>GROUP BY HAVING:</p>
+<ul>
+<li>Silimar to <code>WHERE</code> but applied
+with<code>GROUP BY</code></li>
+</ul></li>
+<li><p>GROUP BY WITH ROLLUP:</p>
+<ul>
+<li>The Aggrigation of aggrigation</li>
+</ul></li>
+<li><p>SQL MODES</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> @@GLOBAL.sql_mode</span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SET</span> <span class="kw">GLOBAL</span> sql_mode<span class="op">=</span><span class="st">'modes'</span></span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> @@SESSION.sql_mode</span>
+<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a><span class="kw">SET</span> <span class="kw">SESSION</span> sql_mode <span class="op">=</span> <span class="st">'mode,..'</span></span></code></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="op">+</span><span class="co">-----------------------------------------------------------------------------------------------------------------------+</span></span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>| @@GLOBAL.sql_mode                                                                                                     |</span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="op">+</span><span class="co">-----------------------------------------------------------------------------------------------------------------------+</span></span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>| ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION |</span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a><span class="op">+</span><span class="co">-----------------------------------------------------------------------------------------------------------------------+</span></span></code></pre></div>
+<ul>
+<li>Modes:
+<ul>
+<li>STRICT_TRANS_TABLES: Strict constraints on the data type
+conversion</li>
+<li>ONLY_FULL_BY:</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="window-function">Window function</h2>
+<ul>
+<li>Window function
+<ul>
+<li>Silimar to window function But append aggregation results on each
+row</li>
+</ul></li>
+<li>OVER( PARTITION BY )</li>
+</ul>
+<div class="sourceCode" id="cb56"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>mysql<span class="op">&gt;</span> <span class="kw">SELECT</span> department, salary, <span class="fu">AVG</span>(salary) <span class="kw">OVER</span>(<span class="kw">PARTITION</span> <span class="kw">BY</span> department) <span class="kw">FROM</span> employees;</span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="op">+</span><span class="co">------------------+--------+-------------------------------------------+</span></span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>| department       | salary | <span class="fu">AVG</span>(salary) <span class="kw">OVER</span>(<span class="kw">PARTITION</span> <span class="kw">BY</span> department) |</span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a><span class="op">+</span><span class="co">------------------+--------+-------------------------------------------+</span></span>
+<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a>| customer service |  <span class="dv">38000</span> |                                <span class="fl">46571.4286</span> |</span>
+<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a>| customer service |  <span class="dv">45000</span> |                                <span class="fl">46571.4286</span> |</span>
+<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a>| customer service |  <span class="dv">61000</span> |                                <span class="fl">46571.4286</span> |</span>
+<span id="cb56-8"><a href="#cb56-8" aria-hidden="true" tabindex="-1"></a>| customer service |  <span class="dv">40000</span> |                                <span class="fl">46571.4286</span> |</span>
+<span id="cb56-9"><a href="#cb56-9" aria-hidden="true" tabindex="-1"></a>| customer service |  <span class="dv">31000</span> |                                <span class="fl">46571.4286</span> |</span>
+<span id="cb56-10"><a href="#cb56-10" aria-hidden="true" tabindex="-1"></a>| customer service |  <span class="dv">56000</span> |                                <span class="fl">46571.4286</span> |</span>
+<span id="cb56-11"><a href="#cb56-11" aria-hidden="true" tabindex="-1"></a>| customer service |  <span class="dv">55000</span> |                                <span class="fl">46571.4286</span> |</span>
+<span id="cb56-12"><a href="#cb56-12" aria-hidden="true" tabindex="-1"></a>| engineering      |  <span class="dv">80000</span> |                                <span class="fl">81285.7143</span> |</span>
+<span id="cb56-13"><a href="#cb56-13" aria-hidden="true" tabindex="-1"></a>| engineering      |  <span class="dv">69000</span> |                                <span class="fl">81285.7143</span> |</span></code></pre></div>
+<ul>
+<li>OVER( ORDER BY): rolling style</li>
+</ul>
+<div class="sourceCode" id="cb57"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>mysql<span class="op">&gt;</span> <span class="kw">SELECT</span> department, salary, <span class="fu">SUM</span>(salary) <span class="kw">OVER</span>(<span class="kw">PARTITION</span> <span class="kw">BY</span> department <span class="kw">ORDER</span> <span class="kw">BY</span> salary <span class="kw">ASC</span>) <span class="kw">AS</span> depart_avg_rolling, <span class="fu">SUM</span>(salary) <span class="kw">OVER</span>(<span class="kw">PARTITION</span> <span class="kw">BY</span> department) <span class="kw">as</span> depart_avg <span class="kw">FROM</span> employees;</span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="op">+</span><span class="co">------------------+--------+--------------------+------------+</span></span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>| department       | salary | depart_avg_rolling | depart_avg |</span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a><span class="op">+</span><span class="co">------------------+--------+--------------------+------------+</span></span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>| customer service |  <span class="dv">31000</span> |              <span class="dv">31000</span> |     <span class="dv">326000</span> |</span>
+<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a>| customer service |  <span class="dv">38000</span> |              <span class="dv">69000</span> |     <span class="dv">326000</span> |</span>
+<span id="cb57-7"><a href="#cb57-7" aria-hidden="true" tabindex="-1"></a>| customer service |  <span class="dv">40000</span> |             <span class="dv">109000</span> |     <span class="dv">326000</span> |</span>
+<span id="cb57-8"><a href="#cb57-8" aria-hidden="true" tabindex="-1"></a>| customer service |  <span class="dv">45000</span> |             <span class="dv">154000</span> |     <span class="dv">326000</span> |</span>
+<span id="cb57-9"><a href="#cb57-9" aria-hidden="true" tabindex="-1"></a>| customer service |  <span class="dv">55000</span> |             <span class="dv">209000</span> |     <span class="dv">326000</span> |</span>
+<span id="cb57-10"><a href="#cb57-10" aria-hidden="true" tabindex="-1"></a>| customer service |  <span class="dv">56000</span> |             <span class="dv">265000</span> |     <span class="dv">326000</span> |</span>
+<span id="cb57-11"><a href="#cb57-11" aria-hidden="true" tabindex="-1"></a>| customer service |  <span class="dv">61000</span> |             <span class="dv">326000</span> |     <span class="dv">326000</span> |</span>
+<span id="cb57-12"><a href="#cb57-12" aria-hidden="true" tabindex="-1"></a>| engineering      |  <span class="dv">67000</span> |              <span class="dv">67000</span> |     <span class="dv">569000</span> |</span>
+<span id="cb57-13"><a href="#cb57-13" aria-hidden="true" tabindex="-1"></a>| engineering      |  <span class="dv">69000</span> |             <span class="dv">136000</span> |     <span class="dv">569000</span> |</span>
+<span id="cb57-14"><a href="#cb57-14" aria-hidden="true" tabindex="-1"></a>| engineering      |  <span class="dv">70000</span> |             <span class="dv">206000</span> |     <span class="dv">569000</span> |</span>
+<span id="cb57-15"><a href="#cb57-15" aria-hidden="true" tabindex="-1"></a>| engineering      |  <span class="dv">80000</span> |             <span class="dv">286000</span> |     <span class="dv">569000</span> |</span></code></pre></div>
+<ul>
+<li><code>RANK() OVER( ORDER BY)</code></li>
+</ul>
+<div class="sourceCode" id="cb58"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>mysql<span class="op">&gt;</span> <span class="kw">SELECT</span> department, salary,<span class="fu">RANK</span>() <span class="kw">OVER</span>(<span class="kw">PARTITION</span> <span class="kw">BY</span> department <span class="kw">ORDER</span> <span class="kw">BY</span> salary <span class="kw">DESC</span>) <span class="kw">AS</span> depart_rank, <span class="fu">RANK</span>() <span class="kw">OVER</span>(<span class="kw">ORDER</span> <span class="kw">BY</span> salary <span class="kw">DESC</span>) <span class="kw">AS</span> over_rank <span class="kw">FROM</span> employees;</span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="op">+</span><span class="co">------------------+--------+-------------+-----------+</span></span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>| department       | salary | depart_rank | over_rank |</span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a><span class="op">+</span><span class="co">------------------+--------+-------------+-----------+</span></span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a>| sales            | <span class="dv">159000</span> |           <span class="dv">1</span> |         <span class="dv">1</span> |</span>
+<span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a>| engineering      | <span class="dv">103000</span> |           <span class="dv">1</span> |         <span class="dv">2</span> |</span>
+<span id="cb58-7"><a href="#cb58-7" aria-hidden="true" tabindex="-1"></a>| engineering      |  <span class="dv">91000</span> |           <span class="dv">2</span> |         <span class="dv">3</span> |</span>
+<span id="cb58-8"><a href="#cb58-8" aria-hidden="true" tabindex="-1"></a>| engineering      |  <span class="dv">89000</span> |           <span class="dv">3</span> |         <span class="dv">4</span> |</span>
+<span id="cb58-9"><a href="#cb58-9" aria-hidden="true" tabindex="-1"></a>| engineering      |  <span class="dv">80000</span> |           <span class="dv">4</span> |         <span class="dv">5</span> |</span>
+<span id="cb58-10"><a href="#cb58-10" aria-hidden="true" tabindex="-1"></a>| sales            |  <span class="dv">72000</span> |           <span class="dv">2</span> |         <span class="dv">6</span> |</span>
+<span id="cb58-11"><a href="#cb58-11" aria-hidden="true" tabindex="-1"></a>| engineering      |  <span class="dv">70000</span> |           <span class="dv">5</span> |         <span class="dv">7</span> |</span>
+<span id="cb58-12"><a href="#cb58-12" aria-hidden="true" tabindex="-1"></a>| sales            |  <span class="dv">70000</span> |           <span class="dv">3</span> |         <span class="dv">7</span> |</span>
+<span id="cb58-13"><a href="#cb58-13" aria-hidden="true" tabindex="-1"></a>| engineering      |  <span class="dv">69000</span> |           <span class="dv">6</span> |         <span class="dv">9</span> |</span>
+<span id="cb58-14"><a href="#cb58-14" aria-hidden="true" tabindex="-1"></a>| engineering      |  <span class="dv">67000</span> |           <span class="dv">7</span> |        <span class="dv">10</span> |</span></code></pre></div>
+<ul>
+<li><p><code>NTLE</code></p></li>
+<li><p><code>FIRST VALUE</code></p></li>
+<li><p><code>LAG</code>: Shift down for 1 row</p></li>
+</ul>
+
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2023-06-26</span>
+     
+            
+                <span>Labeled as:
+                    
+                    
+                        <a href='/tags/reading/'>
+                            reading
+                        </a>
+                    
+                        <a href='/tags/MySQL/'>
+                            MySQL
+                        </a>
+                    
+                </span>
+             
+             
+                <span>Categorized as:
+                    
+                    
+                        <a href='/categories/Notes/'>
+                            Notes
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+
+
+
+    
+        
+    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <!-- 以上。  -->
+    </div>
+        
+
+    <div id="waline"></div>
+    <script type="module"  >
+        import { init } from 'https://npm.elemecdn.com/hexo-theme-a4@latest/source/js/waline.mjs'; 
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://nbl29iaf.api.lncldglobal.com',
+                lang: 'en-US',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+                search: false, // 禁止表情包搜索
+                reaction: false, // 对文章打分
+                pageview: true, // 浏览量统计
+                comment: false, // 评论数统计
+
+                locale: {
+                    placeholder: 'Leave your comments', 
+                    sofa: ''
+                },
+            });
+            
+        }
+        window.addEventListener('DOMContentLoaded', loadWaline);
+    </script>
+
+
+    </div>
+
+
+     
+
+
+
+
+
+
+
+</div>
+
+
+
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            Keep Learning 
+
+
+
+
+
+            
+                
+
+
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+
+ 
+
+    
+
+        <!-- <div class="header-container">
+            <img style="
+            width: 56px;
+            height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/license.png" width="10%"></img>  
+        </div> -->
+        <!-- Keep Learning  -->
+            <span>CC BY-NC-SA 4.0</span>
+            
+    
+</div>
+
+
+    
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+    
+<script src="/js/highlight.min.js"></script>
+
+    
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+                </div>
+            
+    </body>
+</html>
