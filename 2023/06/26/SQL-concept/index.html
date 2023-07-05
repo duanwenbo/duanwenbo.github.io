@@ -876,7 +876,7 @@ row</li>
 </ul></li>
 <li>OVER( PARTITION BY )</li>
 </ul>
-<div class="sourceCode" id="cb56"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>mysql<span class="op">&gt;</span> <span class="kw">SELECT</span> department, salary, <span class="fu">AVG</span>(salary) <span class="kw">OVER</span>(<span class="kw">PARTITION</span> <span class="kw">BY</span> department) <span class="kw">FROM</span> employees;</span>
+<div class="sourceCode" id="cb56"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>mysql<span class="op">&gt;</span> <span class="kw">SELECT</span> department, salary, <span class="fu">AVG</span>(salary) <span class="kw">OVER</span>(x <span class="kw">BY</span> department) <span class="kw">FROM</span> employees;</span>
 <span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="op">+</span><span class="co">------------------+--------+-------------------------------------------+</span></span>
 <span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>| department       | salary | <span class="fu">AVG</span>(salary) <span class="kw">OVER</span>(<span class="kw">PARTITION</span> <span class="kw">BY</span> department) |</span>
 <span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a><span class="op">+</span><span class="co">------------------+--------+-------------------------------------------+</span></span>
