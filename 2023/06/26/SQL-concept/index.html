@@ -553,9 +553,9 @@ Ref</a></p></li>
 <div class="sourceCode" id="cb35"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> title, released_year,</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="cf">CASE</span></span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">WHEN</span> released_year <span class="op">&gt;=</span> <span class="dv">2000</span> <span class="cf">THEN</span> <span class="st">'Morden lit'</span></span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">WHEN</span> <span class="op">..</span> <span class="cf">THEN</span> <span class="op">..</span> ,</span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">WHEN</span> <span class="op">..</span> <span class="cf">THEN</span> <span class="op">..</span> ,</span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">ELSE</span> <span class="op">..</span> ,</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">WHEN</span> <span class="op">..</span> <span class="cf">THEN</span> <span class="op">..</span> </span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">WHEN</span> <span class="op">..</span> <span class="cf">THEN</span> <span class="op">..</span> </span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">ELSE</span> <span class="op">..</span> </span>
 <span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="cf">END</span> <span class="kw">AS</span> <span class="op">..</span></span>
 <span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> books;</span></code></pre></div></li>
 <li><p><code>IS NULL</code></p></li>
