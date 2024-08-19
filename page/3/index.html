@@ -65,11 +65,7 @@
             
         
             
-                <li><i>
-                    
-                        <a style="color: #4e7dde;" href="/categories/">Categories</a>
-                    
-                </i></li>
+                <li><a href="/categories/">Categories</a></li>
             
         
             
@@ -84,61 +80,76 @@
 
                     
                     
-                        <div class="archive-list">
-  <ul class="archive">
-
-    
-    <span>🔖<i>Blog</i></span>
-      
-      
-      
-          
-    
-    
-  
-    
-        <li>
-          <span class="archive-date">2024/08/19</span>
-          <div class="archive-main">
-              <a class="archive-title" href="/2024/08/19/2024-08-19-Where-does-7-go-/">Where does 7 go ??</a>
-          </div>
-        </li>
-    
-  
-    
-        <li>
-          <span class="archive-date">2023/12/31</span>
-          <div class="archive-main">
-              <a class="archive-title" href="/2023/12/31/%E5%86%99%E5%9C%A82023%E5%B9%B4%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/">写在2023年的最后一天</a>
-          </div>
-        </li>
-    
-  
-    
-        <li>
-          <span class="archive-date">2023/12/24</span>
-          <div class="archive-main">
-              <a class="archive-title" href="/2023/12/24/Egypt%20%F0%9F%87%AA%F0%9F%87%AC/">埃及计划 🇪🇬 Itinerary</a>
-          </div>
-        </li>
-    
-  
-    
-        <li>
-          <span class="archive-date">2023/12/11</span>
-          <div class="archive-main">
-              <a class="archive-title" href="/2023/12/11/SQL%20Boy%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%9C%88/">SQL Boy的第一个月</a>
-          </div>
-        </li>
-    
-  
-  </ul>
-</div>
-
- 
-                    
                     
                     <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+
+    <div class="post-md">
+        
+        
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+        </i>
+    </div>
+
+
+
+    
+        
+    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <!-- 以上。  -->
+    </div>
+        
+
+    <div id="waline"></div>
+    <script type="module"  >
+        import { init } from 'https://npm.elemecdn.com/hexo-theme-a4@latest/source/js/waline.mjs'; 
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://nbl29iaf.api.lncldglobal.com',
+                lang: 'en-US',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+                search: false, // 禁止表情包搜索
+                reaction: false, // 对文章打分
+                pageview: true, // 浏览量统计
+                comment: false, // 评论数统计
+
+                locale: {
+                    placeholder: 'Leave your comments', 
+                    sofa: ''
+                },
+            });
+            
+        }
+        window.addEventListener('DOMContentLoaded', loadWaline);
+    </script>
+
+
+    </div>
+
+
+     
+
+
+
+
+
+
+
+</div>
+
+
+
                     
                     
                     <div class="footer">
