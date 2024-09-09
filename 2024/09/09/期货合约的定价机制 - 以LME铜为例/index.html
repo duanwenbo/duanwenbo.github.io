@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta name="description" content="期货合约的定价机制 - 以LME铜为例" />
+    <meta name="hexo-theme-A4" content="v1.6.9" />
+    <link rel="alternate icon" type="image/webp" href="/img/small.png">
+    <title>Wenbo | Blog</title>
+
+    
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+            
+<link rel="stylesheet" href="/css/waline.css">
+
+        
+    
+    
+<link rel="stylesheet" href="/css/ui.css">
+ 
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+    
+    <body>
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/profile.png" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Wenbo</a> 
+            <span class="description">记上一笔</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">Home</a></li>
+            
+        
+            
+                <li><a href="/list/">Post</a></li>
+            
+        
+            
+                <li><a href="/tags/">Tags</a></li>
+            
+        
+            
+                <li><a href="/categories/">Categories</a></li>
+            
+        
+            
+                <li><a href="/about/">About</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            期货合约的定价机制 - 以LME铜为例
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E6%9C%9F%E8%B4%A7%E5%90%88%E7%BA%A6%E7%9A%84%E5%AE%9A%E4%BB%B7%E6%9C%BA%E5%88%B6---%E4%BB%A5lme%E9%93%9C%E4%B8%BA%E4%BE%8B"><span class="post-toc-text">期货合约的定价机制 -
+以LME铜为例</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#background"><span class="post-toc-text">Background</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#lme-%E9%93%9C%E7%9A%84%E4%BB%B7%E6%A0%BC%E5%8F%91%E7%8E%B0"><span class="post-toc-text">LME 铜的价格发现</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#future"><span class="post-toc-text">Future</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#long-short-position"><span class="post-toc-text">Long &#x2F; Short Position</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#physical-delivery-cash-settlement"><span class="post-toc-text">Physical delivery &#x2F; Cash
+settlement</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#explain-concepts-with-example"><span class="post-toc-text">Explain concepts with
+Example</span></a></li></ol></li></ol></li></ol>
+        
+        <h1 id="期货合约的定价机制---以lme铜为例">期货合约的定价机制 -
+以LME铜为例</h1>
+<h3 id="background">Background</h3>
+<ul>
+<li>大宗商品市场
+<ul>
+<li>大宗商品主要交易场所
+<ul>
+<li>CME：芝加哥商品交易所</li>
+<li>LEM：伦敦金属交易所</li>
+<li>ICE</li>
+</ul></li>
+<li>大宗商品交易目的：
+<ul>
+<li>国际<strong>贸易</strong></li>
+<li><strong>对冲</strong>风险</li>
+<li><strong>投机</strong>与投资</li>
+</ul></li>
+</ul></li>
+<li>市场分类：
+<ul>
+<li>现金市场</li>
+<li>衍生品市场：
+<ul>
+<li>期货 Future （场内交易）</li>
+<li>远期 Forward （场外交易 OTC）</li>
+<li>掉期 Swaps</li>
+<li>期权 Options</li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 id="lme-铜的价格发现">LME 铜的价格发现</h3>
+<ul>
+<li>LME参考价格
+<ul>
+<li>伦敦金属交易所铜的官方价格每日根据第二天早盘收盘时（伦敦时间
+12:30-12:35，伦敦金属交易所公开喊价交易大厅）的买入价和卖出价确定。<u><strong>伦敦金属交易所官方结算价也是在场内确定的，是铜的现金卖方价格，广泛应用于世界各地的实物铜合约。</strong></u>这意味着它代表了任何经批准的伦敦金属交易所铜品牌的价格，这些铜可在两个工作日内交付于伦敦金属交易所全球仓库网络的任何地点。价格确定后，伦敦金属交易所会记录、分发和公布价格给世界各地的供应商，供应商再将数据传播给整个价值链上的行业用户。</li>
+<li>交易所视频 -&gt;
+https://www.youtube.com/watch?v=Mic1Q0oVfgM&amp;t=4s</li>
+</ul></li>
+<li>溢价 (Premium) 与折扣 (discount)
+<ul>
+<li>LME参考价格不一定是最终合约价格。公司可以从这些价格发现组织和机制提供的更高透明度中受益。因此，公司可以更好地集中精力协商基础金属和其特定产品之间的溢价或折扣价值。<strong><u>这些溢价或折扣可能基于多种因素，其中包括最常提到的一些因素：地理位置、材料等级、杂质和交货条款。</u></strong></li>
+</ul></li>
+</ul>
+<h3 id="future">Future</h3>
+<ul>
+<li>Future is a contract that is defined and traded in the exchange. The
+product is <strong>obligation to buy/sell a standard quantity on a set
+future date, at a fixed price</strong>.</li>
+</ul>
+<h3 id="long-short-position">Long / Short Position</h3>
+<ul>
+<li>Futrue contract are traded at future exchanges. The buyer of a
+future contract is said to be the <strong>long</strong> (多头) position
+holder, and the seller is said to be the <strong>short</strong> (空头)
+position holder.</li>
+</ul>
+<h3 id="physical-delivery-cash-settlement">Physical delivery / Cash
+settlement</h3>
+<ul>
+<li>Cash settlement is made based on the underlying reference rate. The
+parties settle by paying/receiving the loss/gain related to contract in
+cash when contract expires.</li>
+</ul>
+<h3 id="explain-concepts-with-example">Explain concepts with
+Example</h3>
+<p><em>I'm growing Potatos at Diddly Squat Farm</em></p>
+<ul>
+<li><strong>Future Contract:</strong>
+<ul>
+<li>A standarlised legal agreement to buy or sell a financial asset ata
+predetermined price at a specified time in the future.</li>
+<li>I don't know the market price in the coming year. Therefore, I want
+to set 100t potatos at price 100$/t in the next year, on 1st May 2025,
+to give me a garauntee profit.</li>
+</ul></li>
+<li><strong>Future exchange:</strong>
+<ul>
+<li>Futrue contract are traded at future exchanges. The buyer of a
+future contract is said to be the <strong>long</strong> position holder,
+and the seller is said to be the <strong>short</strong> position
+holder.</li>
+</ul></li>
+</ul>
+
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2024-09-09</span>
+     
+            
+                <span>Labeled as:
+                    
+                    
+                        <a href='/tags/Finacial-101/'>
+                            Finacial 101
+                        </a>
+                    
+                </span>
+             
+             
+                <span>Categorized as:
+                    
+                    
+                        <a href='/categories/Reading-Note/'>
+                            Reading-Note
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+
+
+
+    
+        
+    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <!-- 以上。  -->
+    </div>
+        
+
+    <div id="waline"></div>
+    <script type="module"  >
+        import { init } from 'https://npm.elemecdn.com/hexo-theme-a4@latest/source/js/waline.mjs'; 
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://nbl29iaf.api.lncldglobal.com',
+                lang: 'en-US',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+                search: false, // 禁止表情包搜索
+                reaction: false, // 对文章打分
+                pageview: true, // 浏览量统计
+                comment: false, // 评论数统计
+
+                locale: {
+                    placeholder: 'Leave your comments', 
+                    sofa: ''
+                },
+            });
+            
+        }
+        window.addEventListener('DOMContentLoaded', loadWaline);
+    </script>
+
+
+    </div>
+
+
+     
+
+
+
+
+
+
+
+</div>
+
+
+
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            Keep Learning 
+
+
+
+
+
+            
+                
+
+
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+
+ 
+
+    
+
+        <!-- <div class="header-container">
+            <img style="
+            width: 56px;
+            height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/license.png" width="10%"></img>  
+        </div> -->
+        <!-- Keep Learning  -->
+            <span>CC BY-NC-SA 4.0</span>
+            
+    
+</div>
+
+
+    
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+    
+<script src="/js/highlight.min.js"></script>
+
+    
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+                </div>
+            
+    </body>
+</html>

@@ -3,7 +3,7 @@
     <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
-    <meta name="description" content="categories" />
+    <meta name="description" content="" />
     <meta name="hexo-theme-A4" content="v1.6.9" />
     <link rel="alternate icon" type="image/webp" href="/img/small.png">
     <title>Wenbo | Blog</title>
@@ -19,10 +19,6 @@
 <link rel="stylesheet" href="/css/fonts.css">
  
          <!--注意：首页既不是post也不是page-->
-        
-            
-<link rel="stylesheet" href="/css/waline.css">
-
         
     
     
@@ -69,11 +65,7 @@
             
         
             
-                <li><i>
-                    
-                        <a style="color: #4e7dde;" href="/categories/">Categories</a>
-                    
-                </i></li>
+                <li><a href="/categories/">Categories</a></li>
             
         
             
@@ -85,70 +77,79 @@
         
                     
                     
-                            <br>
-<span>🔖<i>categories</i></span>
-<ul class="" >
-  
-
-  
-
-  
-
-  
-  
-  
-  
-      
-        <li class="">
-            <a href="/categories/Reading-Note">Reading-Note</a>
-            <span><i>7</i></span>
-        </li>
-    
-        <li class="">
-            <a href="/categories/Blog">Blog</a>
-            <span><i>4</i></span>
-        </li>
-    
-        <li class="">
-            <a href="/categories/Notes">Notes</a>
-            <span><i>2</i></span>
-        </li>
-    
-        <li class="">
-            <a href="/categories/Paper-Submission">Paper-Submission</a>
-            <span><i>1</i></span>
-        </li>
-    
-        <li class="">
-            <a href="/categories/Reinforcement-Learning">Reinforcement-Learning</a>
-            <span><i>2</i></span>
-        </li>
-    
-        <li class="">
-            <a href="/categories/Machine-Learning-Notes">Machine-Learning-Notes</a>
-            <span><i>2</i></span>
-        </li>
-    
-        <li class="">
-            <a href="/categories/Machine-Learning%20Notes">Machine-Learning Notes</a>
-            <span><i>1</i></span>
-        </li>
-    
-        <li class="">
-            <a href="/categories/Linear-Algebra">Linear-Algebra</a>
-            <span><i>1</i></span>
-        </li>
-    
-    
-
-    
-</ul>
-                    
 
                     
                     
                     
                     <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+
+    <div class="post-md">
+        
+        
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+        </i>
+    </div>
+
+
+
+    
+        
+    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <!-- 以上。  -->
+    </div>
+        
+
+    <div id="waline"></div>
+    <script type="module"  >
+        import { init } from 'https://npm.elemecdn.com/hexo-theme-a4@latest/source/js/waline.mjs'; 
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://nbl29iaf.api.lncldglobal.com',
+                lang: 'en-US',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+                search: false, // 禁止表情包搜索
+                reaction: false, // 对文章打分
+                pageview: true, // 浏览量统计
+                comment: false, // 评论数统计
+
+                locale: {
+                    placeholder: 'Leave your comments', 
+                    sofa: ''
+                },
+            });
+            
+        }
+        window.addEventListener('DOMContentLoaded', loadWaline);
+    </script>
+
+
+    </div>
+
+
+     
+
+
+
+
+
+
+
+</div>
+
+
+
                     
                     
                     <div class="footer">
