@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Normal-Equation on 🤗 Wenbo&#39;Log</title>
+    <link>http://localhost:1313/tags/normal-equation/</link>
+    <description>Recent content in Normal-Equation on 🤗 Wenbo&#39;Log</description>
+    <image>
+      <title>🤗 Wenbo&#39;Log</title>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.136.2</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 01 Apr 2021 23:54:22 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/normal-equation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Normal Equation</title>
+      <link>http://localhost:1313/posts/normal-equation/</link>
+      <pubDate>Thu, 01 Apr 2021 23:54:22 +0000</pubDate>
+      <guid>http://localhost:1313/posts/normal-equation/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;Normal Equation is a method in parallel with gradient descent algorithm to minimize the cost function J.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Daily on 🤗 Wenbo&#39;Log</title>
+    <link>http://localhost:1313/tags/daily/</link>
+    <description>Recent content in Daily on 🤗 Wenbo&#39;Log</description>
+    <image>
+      <title>🤗 Wenbo&#39;Log</title>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.136.2</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 19 Aug 2024 23:30:31 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/daily/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Where does 7 go ??</title>
+      <link>http://localhost:1313/posts/2024-08-19-where-does-7-go-/</link>
+      <pubDate>Mon, 19 Aug 2024 23:30:31 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2024-08-19-where-does-7-go-/</guid>
+      <description>&lt;p&gt;2024年8月18日，在Bristol Art Museun 和Pipa一起端详到一幅18世纪布里斯托城市地图。画笔精细，标注翔实。跟随地图序号的小标指引，仿佛能穿越历史。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p.ipic.vip/bmvuzf.jpg&#34; alt=&#34;The south east prospect of city of Bristol&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;然而，从1到29的地图序号标注中，唯独序号7: &lt;em&gt;Padmoor&amp;rsquo;s nen Crane&lt;/em&gt; 难觅踪影。上下扫描，来回切换，左右横跳，辗转反侧，只留下一个问题：7号建筑去哪儿了？？ 在原画中找不到7号建筑后，遂花一晚时间，开始考古，收获一些fun facts：&lt;/p&gt;
+&lt;h3 id=&#34;结论1-padmoors-nen-crane-在地图中并未实际标出&#34;&gt;结论1: Padmoors nen Crane 在地图中并未实际标出&lt;/h3&gt;
+&lt;p&gt;经过反复观察，标号7并未出现在原作地图中。&lt;a href=&#34;https://artcollection.culture.gov.uk&#34;&gt;在英国政府艺术收藏网站&lt;/a&gt; 中，检索到两幅高清彩色版本地图，除开原图[《The South East Prospect of the City of Bristol》][The South East Prospect of the City of Bristol] 外，还有一幅对方视角的地图 &lt;a href=&#34;https://artcollection.culture.gov.uk/artwork/9633/&#34;&gt;《The North West Prospect of the City of Bristol》&lt;/a&gt;：&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;序号7位于两座地标性建筑：redcliff church (10号) 与  The college (6号) 中间，因此很容易在两幅地图中定位对比，然而，序号7建筑在两幅相对视角的图中均未标注提及。这也让寻找Padmoor&amp;rsquo;s nen Crane 变得更加有趣。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

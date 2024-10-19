@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Graph-Theory on 🤗 Wenbo&#39;Log</title>
+    <link>http://localhost:1313/tags/graph-theory/</link>
+    <description>Recent content in Graph-Theory on 🤗 Wenbo&#39;Log</description>
+    <image>
+      <title>🤗 Wenbo&#39;Log</title>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.136.2</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 01 Jun 2023 23:56:22 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/graph-theory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Common Terminologies in Graph Thoery</title>
+      <link>http://localhost:1313/posts/common-terminologies-in-graph-thoery/</link>
+      <pubDate>Thu, 01 Jun 2023 23:56:22 +0000</pubDate>
+      <guid>http://localhost:1313/posts/common-terminologies-in-graph-thoery/</guid>
+      <description>&lt;h1 id=&#34;common-terminologies-in-graph-thoery&#34;&gt;Common Terminologies in Graph Thoery&lt;/h1&gt;
+&lt;p&gt;Define an undirected graph with the natrual order as $G = (V,E,\sigma)$ where $V$ is the set of the vertices, $E$ is the set of edges and $\sigma$ is the natrual ordering.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Chordal graph&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A &lt;strong&gt;chordal&lt;/strong&gt; is a path of undirected graph between two non-conescutive vertices. (&amp;ldquo;shortcut&amp;rdquo;&amp;quot; between two vertices&amp;quot;)&lt;/li&gt;
+&lt;li&gt;A &lt;strong&gt;chordal graph&lt;/strong&gt; referes to every cycle of length four or greater of a simple graph has a chord. (triangulated graph)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Chordal Completion&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Clique seperator</title>
+      <link>http://localhost:1313/posts/decomposition-by-clique-seperator/</link>
+      <pubDate>Thu, 01 Jun 2023 23:54:22 +0000</pubDate>
+      <guid>http://localhost:1313/posts/decomposition-by-clique-seperator/</guid>
+      <description>&lt;h1 id=&#34;clique-seperator&#34;&gt;Clique seperator&lt;/h1&gt;
+&lt;h2 id=&#34;decomposition-by-clique-seperator-tarjan-1985httpsscholargooglecomcitationsuserlazjixiaaaajhlzh-cnoisra&#34;&gt;Decomposition by clique seperator (&lt;a href=&#34;https://scholar.google.com/citations?user=lazJixIAAAAJ&amp;amp;hl=zh-CN&amp;amp;oi=sra&#34;&gt;Tarjan, 1985&lt;/a&gt;)&lt;/h2&gt;
+&lt;h3 id=&#34;main-idea&#34;&gt;Main Idea:&lt;/h3&gt;
+&lt;p&gt;Based on the idea of &amp;lsquo;divide and conquer&amp;rsquo;, this paper proposed an graph decomposition algorithm by finding the clique seperator recursively. The decomposition results in a binary decomposition tree. The author suggested some general ideas to tackle 4 NP-hard problems by ultlizing the binary decomposition tree.&lt;/p&gt;
+&lt;h3 id=&#34;preliminaries&#34;&gt;Preliminaries&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Perfect elimination ordering&lt;/em&gt;, &lt;em&gt;Clique&lt;/em&gt;, &lt;em&gt;Minimal and Minimum ordering&lt;/em&gt;, &lt;em&gt;Seperator&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;algorithms&#34;&gt;Algorithms&lt;/h3&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;a href=&#34;https://scholar.google.com/citations?user=lazJixIAAAAJ&amp;amp;hl=zh-CN&amp;amp;oi=sra&#34;&gt;Text description&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Revisiting Sparse Matrix Technologies</title>
+      <link>http://localhost:1313/posts/revisiting-sparse-matrix-technologies/</link>
+      <pubDate>Wed, 26 Apr 2023 23:54:22 +0000</pubDate>
+      <guid>http://localhost:1313/posts/revisiting-sparse-matrix-technologies/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;Revisitting the sparse matrix technology - Summary.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Reverse Cuthill-McKee Algorithm</title>
+      <link>http://localhost:1313/posts/reverse-cuthill-mckee-algorithm/</link>
+      <pubDate>Mon, 24 Apr 2023 23:54:22 +0000</pubDate>
+      <guid>http://localhost:1313/posts/reverse-cuthill-mckee-algorithm/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;Revisitting the sparse matrix technology.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Nested Dissection Algorithm</title>
+      <link>http://localhost:1313/posts/nested-dissection/</link>
+      <pubDate>Fri, 14 Apr 2023 23:54:22 +0000</pubDate>
+      <guid>http://localhost:1313/posts/nested-dissection/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;Revisitting the sparse matrix technology.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

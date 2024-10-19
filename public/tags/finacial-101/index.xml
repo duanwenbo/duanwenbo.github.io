@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Finacial 101 on 🤗 Wenbo&#39;Log</title>
+    <link>http://localhost:1313/tags/finacial-101/</link>
+    <description>Recent content in Finacial 101 on 🤗 Wenbo&#39;Log</description>
+    <image>
+      <title>🤗 Wenbo&#39;Log</title>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.136.2</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 16 Sep 2024 23:30:31 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/finacial-101/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Black-Scholes Formula</title>
+      <link>http://localhost:1313/posts/black-scholes-formula/</link>
+      <pubDate>Mon, 16 Sep 2024 23:30:31 +0000</pubDate>
+      <guid>http://localhost:1313/posts/black-scholes-formula/</guid>
+      <description>&lt;p&gt;$$
+C(S_t,t) = N(d_+) S_t - N(d_{-})Ke^{-r(T-t)}
+$$
+Where N is the c.d.f of the normal distribution.&lt;/p&gt;
+&lt;p&gt;B.S. formula services as an accurate mathmatical model to price the option, and enbale the people to hedge the risk against almost any underlying assets.&lt;/p&gt;
+&lt;p&gt;The Greeks for Black–Scholes are given in closed form below. They can be obtained by differentiation of the Black–Scholes formula.&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p.ipic.vip/00e75e.png&#34; alt=&#34;Greek Letters for Market Risk&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;Great Introduction:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>期货合约的定价机制 - 以LME铜为例</title>
+      <link>http://localhost:1313/posts/%E6%9C%9F%E8%B4%A7%E5%90%88%E7%BA%A6%E7%9A%84%E5%AE%9A%E4%BB%B7%E6%9C%BA%E5%88%B6---%E4%BB%A5lme%E9%93%9C%E4%B8%BA%E4%BE%8B/</link>
+      <pubDate>Mon, 09 Sep 2024 23:30:31 +0000</pubDate>
+      <guid>http://localhost:1313/posts/%E6%9C%9F%E8%B4%A7%E5%90%88%E7%BA%A6%E7%9A%84%E5%AE%9A%E4%BB%B7%E6%9C%BA%E5%88%B6---%E4%BB%A5lme%E9%93%9C%E4%B8%BA%E4%BE%8B/</guid>
+      <description>&lt;h1 id=&#34;期货合约的定价机制---以lme铜为例&#34;&gt;期货合约的定价机制 - 以LME铜为例&lt;/h1&gt;
+&lt;h3 id=&#34;background&#34;&gt;Background&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;大宗商品市场
+&lt;ul&gt;
+&lt;li&gt;大宗商品主要交易场所
+&lt;ul&gt;
+&lt;li&gt;CME：芝加哥商品交易所&lt;/li&gt;
+&lt;li&gt;LEM：伦敦金属交易所&lt;/li&gt;
+&lt;li&gt;ICE&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;大宗商品交易目的：
+&lt;ul&gt;
+&lt;li&gt;国际&lt;strong&gt;贸易&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;对冲&lt;/strong&gt;风险&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;投机&lt;/strong&gt;与投资&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;市场分类：
+&lt;ul&gt;
+&lt;li&gt;现金市场&lt;/li&gt;
+&lt;li&gt;衍生品市场：
+&lt;ul&gt;
+&lt;li&gt;期货 Future （场内交易）&lt;/li&gt;
+&lt;li&gt;远期 Forward  （场外交易 OTC）&lt;/li&gt;
+&lt;li&gt;掉期 Swaps&lt;/li&gt;
+&lt;li&gt;期权 Options&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;lme-铜的价格发现&#34;&gt;LME 铜的价格发现&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;LME参考价格
+&lt;ul&gt;
+&lt;li&gt;伦敦金属交易所铜的官方价格每日根据第二天早盘收盘时（伦敦时间 12:30-12:35，伦敦金属交易所公开喊价交易大厅）的买入价和卖出价确定。&lt;!-- raw HTML omitted --&gt;&lt;strong&gt;伦敦金属交易所官方结算价也是在场内确定的，是铜的现金卖方价格，广泛应用于世界各地的实物铜合约。&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;这意味着它代表了任何经批准的伦敦金属交易所铜品牌的价格，这些铜可在两个工作日内交付于伦敦金属交易所全球仓库网络的任何地点。价格确定后，伦敦金属交易所会记录、分发和公布价格给世界各地的供应商，供应商再将数据传播给整个价值链上的行业用户。&lt;/li&gt;
+&lt;li&gt;交易所视频 -&amp;gt; &lt;a href=&#34;https://www.youtube.com/watch?v=Mic1Q0oVfgM&amp;amp;t=4s&#34;&gt;https://www.youtube.com/watch?v=Mic1Q0oVfgM&amp;amp;t=4s&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;溢价 (Premium) 与折扣 (discount)
+&lt;ul&gt;
+&lt;li&gt;LME参考价格不一定是最终合约价格。公司可以从这些价格发现组织和机制提供的更高透明度中受益。因此，公司可以更好地集中精力协商基础金属和其特定产品之间的溢价或折扣价值。&lt;strong&gt;&lt;!-- raw HTML omitted --&gt;这些溢价或折扣可能基于多种因素，其中包括最常提到的一些因素：地理位置、材料等级、杂质和交货条款。&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;future&#34;&gt;Future&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Future is a contract that is defined and traded in the exchange. The product is &lt;strong&gt;obligation to buy/sell a standard quantity on a set future date, at a fixed price&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;long--short-position&#34;&gt;Long / Short Position&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Futrue contract are traded at future exchanges. The buyer of a future contract is said to be the &lt;strong&gt;long&lt;/strong&gt; (多头) position holder, and the seller is said to be the &lt;strong&gt;short&lt;/strong&gt; (空头) position holder.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;physical-delivery--cash-settlement&#34;&gt;Physical delivery / Cash settlement&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Cash settlement is made based on the underlying reference rate. The parties settle by paying/receiving the loss/gain related to contract in cash when contract expires.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;explain-concepts-with-example&#34;&gt;Explain concepts with Example&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;I&amp;rsquo;m growing Potatos at Diddly Squat Farm&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>MySQL on 🤗 Wenbo&#39;Log</title>
+    <link>http://localhost:1313/tags/mysql/</link>
+    <description>Recent content in MySQL on 🤗 Wenbo&#39;Log</description>
+    <image>
+      <title>🤗 Wenbo&#39;Log</title>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.136.2</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 26 Jun 2023 23:54:22 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Quick Notes on SQL</title>
+      <link>http://localhost:1313/posts/sql-concept/</link>
+      <pubDate>Mon, 26 Jun 2023 23:54:22 +0000</pubDate>
+      <guid>http://localhost:1313/posts/sql-concept/</guid>
+      <description>&lt;h2 id=&#34;concept&#34;&gt;Concept&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;What is a database?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A &lt;strong&gt;structured&lt;/strong&gt; set of computerized data with &lt;strong&gt;accessible interface&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SQL:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Structure Query Language (SQL), A standard language used in all relational database management system&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Install the database&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Two components:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;MySQL&lt;/li&gt;
+&lt;li&gt;SQL workbench&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add the mysql to the environment variable&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;open ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## add the mysql bin&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## no spaces around the = &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;:/usr/local/mysql/bin
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## The save the file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ./zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Hierachy:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Server -&amp;gt; Multiple database -&amp;gt; Multiple sheets&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;basic&#34;&gt;Basic&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Select, Create, Delete&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

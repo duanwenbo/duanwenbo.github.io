@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Linear-Algebra on 🤗 Wenbo&#39;Log</title>
+    <link>http://localhost:1313/categories/linear-algebra/</link>
+    <description>Recent content in Linear-Algebra on 🤗 Wenbo&#39;Log</description>
+    <image>
+      <title>🤗 Wenbo&#39;Log</title>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.136.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 13 Mar 2021 23:30:31 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/linear-algebra/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Eigenvector and Eigenvalue Review</title>
+      <link>http://localhost:1313/posts/2021-03-13-eigenvector-and-eigenvalue-review/</link>
+      <pubDate>Sat, 13 Mar 2021 23:30:31 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2021-03-13-eigenvector-and-eigenvalue-review/</guid>
+      <description>&lt;h2 id=&#34;basic-method&#34;&gt;Basic Method&lt;/h2&gt;
+&lt;p&gt;When learning the eigenvalue and eigenvector, we are commonly given an equation at the beginning
+$$
+AX = \lambda X \tag{1}
+$$
+Where&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A is the matrix&lt;/li&gt;
+&lt;li&gt;X is the eigenvector&lt;/li&gt;
+&lt;li&gt;$\lambda$ is the eigenvalue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;take-an-example&#34;&gt;Take an example&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Q: Find the eigenvalues and eigenvectors of the matrix&lt;/em&gt;
+$$
+A = \begin{bmatrix}
+1&amp;amp;1&amp;amp;-2\
+-1&amp;amp;2&amp;amp;1\
+0&amp;amp;1&amp;amp;-1
+\end{bmatrix}
+$$
+A: To get the answer, firstly apply the equation (1) :
+$$
+AX = \lambda X \tag{1}
+$$&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
