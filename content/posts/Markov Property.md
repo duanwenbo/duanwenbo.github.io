@@ -1,5 +1,5 @@
 ---
-title: Markov Decision Processes 
+title: Note | Markov Decision Processes 
 date: 2021-06-01 23:54:22
 mathjax: true
 tags:
@@ -8,6 +8,7 @@ tags:
 - Reinforcement-Learning
 categories:
 - Reinforcement-Learning
+- Notes
 ShowToc: true
 ---
 # Markov Property (MP)

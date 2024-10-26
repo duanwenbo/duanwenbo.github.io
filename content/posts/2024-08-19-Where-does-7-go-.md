@@ -1,5 +1,5 @@
 ---
-title: Where does 7 go ??
+title: Daily | Where does 7 go ??
 date: 2024-08-19 23:30:31
 mathjax: false
 categories:

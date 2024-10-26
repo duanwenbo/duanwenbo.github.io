@@ -1,11 +1,12 @@
 ---
-title: Batch Gradient Descent Algorithm 
+title: Note | Batch Gradient Descent Algorithm 
 date: 2021-03-14 23:30:31
 mathjax: true
 categories:
 - Machine-Learning-Notes
 tags:
 - Gradient-Descent
+- Notes
 ShowToc: true
 ---
 

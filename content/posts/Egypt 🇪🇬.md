@@ -1,9 +1,10 @@
 ---
-title: 埃及计划 🇪🇬 Itinerary 
+title: Daily | 埃及计划 🇪🇬 Itinerary 
 date: 2023-12-24 23:30:31
 mathjax: false
 categories:
 - Blog
+- Daily
 tags:
 - travel
 ---

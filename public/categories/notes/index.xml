@@ -11,10 +11,25 @@
     </image>
     <generator>Hugo -- 0.136.2</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 26 Jun 2023 23:54:22 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Sep 2024 23:30:31 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Quick Notes on SQL</title>
+      <title>Note | Black-Scholes Formula</title>
+      <link>http://localhost:1313/posts/black-scholes-formula/</link>
+      <pubDate>Mon, 16 Sep 2024 23:30:31 +0000</pubDate>
+      <guid>http://localhost:1313/posts/black-scholes-formula/</guid>
+      <description>&lt;p&gt;$$
+C(S_t,t) = N(d_+) S_t - N(d_{-})Ke^{-r(T-t)}
+$$
+Where N is the c.d.f of the normal distribution.&lt;/p&gt;
+&lt;p&gt;B.S. formula services as an accurate mathmatical model to price the option, and enbale the people to hedge the risk against almost any underlying assets.&lt;/p&gt;
+&lt;p&gt;The Greeks for Black–Scholes are given in closed form below. They can be obtained by differentiation of the Black–Scholes formula.&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p.ipic.vip/00e75e.png&#34; alt=&#34;Greek Letters for Market Risk&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;Great Introduction:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Note | Quick Notes on SQL</title>
       <link>http://localhost:1313/posts/sql-concept/</link>
       <pubDate>Mon, 26 Jun 2023 23:54:22 +0000</pubDate>
       <guid>http://localhost:1313/posts/sql-concept/</guid>
@@ -64,6 +79,84 @@
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Select, Create, Delete&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Note | Common Terminologies in Graph Thoery</title>
+      <link>http://localhost:1313/posts/common-terminologies-in-graph-thoery/</link>
+      <pubDate>Thu, 01 Jun 2023 23:56:22 +0000</pubDate>
+      <guid>http://localhost:1313/posts/common-terminologies-in-graph-thoery/</guid>
+      <description>&lt;h1 id=&#34;common-terminologies-in-graph-thoery&#34;&gt;Common Terminologies in Graph Thoery&lt;/h1&gt;
+&lt;p&gt;Define an undirected graph with the natrual order as $G = (V,E,\sigma)$ where $V$ is the set of the vertices, $E$ is the set of edges and $\sigma$ is the natrual ordering.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Chordal graph&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A &lt;strong&gt;chordal&lt;/strong&gt; is a path of undirected graph between two non-conescutive vertices. (&amp;ldquo;shortcut&amp;rdquo;&amp;quot; between two vertices&amp;quot;)&lt;/li&gt;
+&lt;li&gt;A &lt;strong&gt;chordal graph&lt;/strong&gt; referes to every cycle of length four or greater of a simple graph has a chord. (triangulated graph)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Chordal Completion&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Note | Clique seperator</title>
+      <link>http://localhost:1313/posts/decomposition-by-clique-seperator/</link>
+      <pubDate>Thu, 01 Jun 2023 23:54:22 +0000</pubDate>
+      <guid>http://localhost:1313/posts/decomposition-by-clique-seperator/</guid>
+      <description>&lt;h1 id=&#34;clique-seperator&#34;&gt;Clique seperator&lt;/h1&gt;
+&lt;h2 id=&#34;decomposition-by-clique-seperator-tarjan-1985httpsscholargooglecomcitationsuserlazjixiaaaajhlzh-cnoisra&#34;&gt;Decomposition by clique seperator (&lt;a href=&#34;https://scholar.google.com/citations?user=lazJixIAAAAJ&amp;amp;hl=zh-CN&amp;amp;oi=sra&#34;&gt;Tarjan, 1985&lt;/a&gt;)&lt;/h2&gt;
+&lt;h3 id=&#34;main-idea&#34;&gt;Main Idea:&lt;/h3&gt;
+&lt;p&gt;Based on the idea of &amp;lsquo;divide and conquer&amp;rsquo;, this paper proposed an graph decomposition algorithm by finding the clique seperator recursively. The decomposition results in a binary decomposition tree. The author suggested some general ideas to tackle 4 NP-hard problems by ultlizing the binary decomposition tree.&lt;/p&gt;
+&lt;h3 id=&#34;preliminaries&#34;&gt;Preliminaries&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Perfect elimination ordering&lt;/em&gt;, &lt;em&gt;Clique&lt;/em&gt;, &lt;em&gt;Minimal and Minimum ordering&lt;/em&gt;, &lt;em&gt;Seperator&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;algorithms&#34;&gt;Algorithms&lt;/h3&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;a href=&#34;https://scholar.google.com/citations?user=lazJixIAAAAJ&amp;amp;hl=zh-CN&amp;amp;oi=sra&#34;&gt;Text description&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Note | Reverse Cuthill-McKee Algorithm</title>
+      <link>http://localhost:1313/posts/reverse-cuthill-mckee-algorithm/</link>
+      <pubDate>Mon, 24 Apr 2023 23:54:22 +0000</pubDate>
+      <guid>http://localhost:1313/posts/reverse-cuthill-mckee-algorithm/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;Revisitting the sparse matrix technology.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Note | Monte Carlo Tree Search Summary</title>
+      <link>http://localhost:1313/posts/monte-carlo-tree-search-summary/</link>
+      <pubDate>Wed, 11 Jan 2023 23:54:22 +0000</pubDate>
+      <guid>http://localhost:1313/posts/monte-carlo-tree-search-summary/</guid>
+      <description>&lt;h1 id=&#34;monte-carlo-tree-search-summary&#34;&gt;Monte Carlo Tree Search Summary&lt;/h1&gt;</description>
+    </item>
+    <item>
+      <title>Note | Reinforcement Learning Algorithms Summary</title>
+      <link>http://localhost:1313/posts/reinfoce/</link>
+      <pubDate>Thu, 08 Jul 2021 23:54:22 +0000</pubDate>
+      <guid>http://localhost:1313/posts/reinfoce/</guid>
+      <description>&lt;h1 id=&#34;reinforcement-learning-algorithms-summary&#34;&gt;Reinforcement Learning Algorithms Summary&lt;/h1&gt;</description>
+    </item>
+    <item>
+      <title>Note | Markov Decision Processes</title>
+      <link>http://localhost:1313/posts/markov-property/</link>
+      <pubDate>Tue, 01 Jun 2021 23:54:22 +0000</pubDate>
+      <guid>http://localhost:1313/posts/markov-property/</guid>
+      <description>&lt;h1 id=&#34;markov-property-mp&#34;&gt;Markov Property (MP)&lt;/h1&gt;</description>
+    </item>
+    <item>
+      <title>Note | Normal Equation</title>
+      <link>http://localhost:1313/posts/normal-equation/</link>
+      <pubDate>Thu, 01 Apr 2021 23:54:22 +0000</pubDate>
+      <guid>http://localhost:1313/posts/normal-equation/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;Normal Equation is a method in parallel with gradient descent algorithm to minimize the cost function J.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Note | Polynomial Regression and Feature Scaling</title>
+      <link>http://localhost:1313/posts/scaling/</link>
+      <pubDate>Thu, 01 Apr 2021 03:18:18 +0000</pubDate>
+      <guid>http://localhost:1313/posts/scaling/</guid>
+      <description>&lt;h2 id=&#34;linear-regression-with-multiple-variables&#34;&gt;Linear Regression with multiple variables&lt;/h2&gt;
+&lt;p&gt;It is common to consider more than one features when making a prediction. For example when predicting the price of a house:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

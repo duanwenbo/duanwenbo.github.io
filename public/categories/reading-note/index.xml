@@ -14,7 +14,7 @@
     <lastBuildDate>Mon, 16 Sep 2024 23:30:31 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/reading-note/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Black-Scholes Formula</title>
+      <title>Note | Black-Scholes Formula</title>
       <link>http://localhost:1313/posts/black-scholes-formula/</link>
       <pubDate>Mon, 16 Sep 2024 23:30:31 +0000</pubDate>
       <guid>http://localhost:1313/posts/black-scholes-formula/</guid>
@@ -29,7 +29,7 @@ Where N is the c.d.f of the normal distribution.&lt;/p&gt;
 &lt;p&gt;Great Introduction:&lt;/p&gt;</description>
     </item>
     <item>
-      <title>期货合约的定价机制 - 以LME铜为例</title>
+      <title>Note | 期货合约的定价机制 - 以LME铜为例</title>
       <link>http://localhost:1313/posts/%E6%9C%9F%E8%B4%A7%E5%90%88%E7%BA%A6%E7%9A%84%E5%AE%9A%E4%BB%B7%E6%9C%BA%E5%88%B6---%E4%BB%A5lme%E9%93%9C%E4%B8%BA%E4%BE%8B/</link>
       <pubDate>Mon, 09 Sep 2024 23:30:31 +0000</pubDate>
       <guid>http://localhost:1313/posts/%E6%9C%9F%E8%B4%A7%E5%90%88%E7%BA%A6%E7%9A%84%E5%AE%9A%E4%BB%B7%E6%9C%BA%E5%88%B6---%E4%BB%A5lme%E9%93%9C%E4%B8%BA%E4%BE%8B/</guid>
@@ -98,7 +98,7 @@ Where N is the c.d.f of the normal distribution.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;I&amp;rsquo;m growing Potatos at Diddly Squat Farm&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Common Terminologies in Graph Thoery</title>
+      <title>Note | Common Terminologies in Graph Thoery</title>
       <link>http://localhost:1313/posts/common-terminologies-in-graph-thoery/</link>
       <pubDate>Thu, 01 Jun 2023 23:56:22 +0000</pubDate>
       <guid>http://localhost:1313/posts/common-terminologies-in-graph-thoery/</guid>
@@ -116,7 +116,7 @@ Where N is the c.d.f of the normal distribution.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Chordal Completion&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Clique seperator</title>
+      <title>Note | Clique seperator</title>
       <link>http://localhost:1313/posts/decomposition-by-clique-seperator/</link>
       <pubDate>Thu, 01 Jun 2023 23:54:22 +0000</pubDate>
       <guid>http://localhost:1313/posts/decomposition-by-clique-seperator/</guid>
@@ -131,7 +131,7 @@ Where N is the c.d.f of the normal distribution.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://scholar.google.com/citations?user=lazJixIAAAAJ&amp;amp;hl=zh-CN&amp;amp;oi=sra&#34;&gt;Text description&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Revisiting Sparse Matrix Technologies</title>
+      <title>Note | Revisiting Sparse Matrix Technologies</title>
       <link>http://localhost:1313/posts/revisiting-sparse-matrix-technologies/</link>
       <pubDate>Wed, 26 Apr 2023 23:54:22 +0000</pubDate>
       <guid>http://localhost:1313/posts/revisiting-sparse-matrix-technologies/</guid>
@@ -139,7 +139,7 @@ Where N is the c.d.f of the normal distribution.&lt;/p&gt;
 &lt;p&gt;Revisitting the sparse matrix technology - Summary.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Reverse Cuthill-McKee Algorithm</title>
+      <title>Note | Reverse Cuthill-McKee Algorithm</title>
       <link>http://localhost:1313/posts/reverse-cuthill-mckee-algorithm/</link>
       <pubDate>Mon, 24 Apr 2023 23:54:22 +0000</pubDate>
       <guid>http://localhost:1313/posts/reverse-cuthill-mckee-algorithm/</guid>
@@ -147,7 +147,7 @@ Where N is the c.d.f of the normal distribution.&lt;/p&gt;
 &lt;p&gt;Revisitting the sparse matrix technology.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Nested Dissection Algorithm</title>
+      <title>Note | Nested Dissection Algorithm</title>
       <link>http://localhost:1313/posts/nested-dissection/</link>
       <pubDate>Fri, 14 Apr 2023 23:54:22 +0000</pubDate>
       <guid>http://localhost:1313/posts/nested-dissection/</guid>
@@ -155,7 +155,7 @@ Where N is the c.d.f of the normal distribution.&lt;/p&gt;
 &lt;p&gt;Revisitting the sparse matrix technology.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Monte Carlo Tree Search Summary</title>
+      <title>Note | Monte Carlo Tree Search Summary</title>
       <link>http://localhost:1313/posts/monte-carlo-tree-search-summary/</link>
       <pubDate>Wed, 11 Jan 2023 23:54:22 +0000</pubDate>
       <guid>http://localhost:1313/posts/monte-carlo-tree-search-summary/</guid>

@@ -1,5 +1,5 @@
 ---
-title: Reverse Cuthill-McKee Algorithm 
+title: Note | Reverse Cuthill-McKee Algorithm 
 date: 2023-04-24 23:54:22
 mathjax: true
 tags:
@@ -9,6 +9,7 @@ tags:
 - Graph-Theory
 categories:
 - Reading-Note
+- Notes
 ShowToc: true
 ---
 

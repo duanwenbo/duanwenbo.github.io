@@ -1,5 +1,5 @@
 ---
-title: Common Terminologies in Graph Thoery
+title: Note | Common Terminologies in Graph Thoery
 date: 2023-06-01 23:56:22
 mathjax: true
 tags:
@@ -8,6 +8,7 @@ tags:
 
 categories:
 - Reading-Note
+- Notes
 
 ShowToc: true
 

@@ -11,13 +11,20 @@
     </image>
     <generator>Hugo -- 0.136.2</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 13 Oct 2024 23:30:31 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 26 Oct 2024 15:30:31 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Digest</title>
       <link>http://localhost:1313/categories/digest/</link>
-      <pubDate>Sun, 13 Oct 2024 23:30:31 +0000</pubDate>
+      <pubDate>Sat, 26 Oct 2024 15:30:31 +0000</pubDate>
       <guid>http://localhost:1313/categories/digest/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Notes</title>
+      <link>http://localhost:1313/categories/notes/</link>
+      <pubDate>Mon, 16 Sep 2024 23:30:31 +0000</pubDate>
+      <guid>http://localhost:1313/categories/notes/</guid>
       <description></description>
     </item>
     <item>
@@ -28,6 +35,13 @@
       <description></description>
     </item>
     <item>
+      <title>Note</title>
+      <link>http://localhost:1313/categories/note/</link>
+      <pubDate>Mon, 09 Sep 2024 23:30:31 +0000</pubDate>
+      <guid>http://localhost:1313/categories/note/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Blog</title>
       <link>http://localhost:1313/categories/blog/</link>
       <pubDate>Mon, 19 Aug 2024 23:30:31 +0000</pubDate>
@@ -35,10 +49,10 @@
       <description></description>
     </item>
     <item>
-      <title>Notes</title>
-      <link>http://localhost:1313/categories/notes/</link>
-      <pubDate>Mon, 26 Jun 2023 23:54:22 +0000</pubDate>
-      <guid>http://localhost:1313/categories/notes/</guid>
+      <title>Daily</title>
+      <link>http://localhost:1313/categories/daily/</link>
+      <pubDate>Sun, 31 Dec 2023 23:30:31 +0000</pubDate>
+      <guid>http://localhost:1313/categories/daily/</guid>
       <description></description>
     </item>
     <item>

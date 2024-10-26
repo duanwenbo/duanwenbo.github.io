@@ -1,5 +1,5 @@
 ---
-title: Reinforcement Learning Algorithms Summary
+title: Note | Reinforcement Learning Algorithms Summary
 date: 2021-07-08 23:54:22
 mathjax: true
 tags:
@@ -9,6 +9,7 @@ tags:
 - Deep-Q-learning
 categories:
 - Reinforcement-Learning
+- Notes
 ShowToc: true
 ---
 # Reinforcement Learning Algorithms Summary

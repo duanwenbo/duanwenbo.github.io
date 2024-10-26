@@ -1,9 +1,10 @@
 ---
-title: Polynomial Regression and Feature Scaling 
+title: Note | Polynomial Regression and Feature Scaling 
 date: 2021-04-01 03:18:18
 mathjax: true
 categories:
 - Machine-Learning Notes
+- Notes
 tags: 
 - Machine-Learning
 - Gradient-Descent

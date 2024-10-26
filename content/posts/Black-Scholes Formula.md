@@ -1,9 +1,10 @@
 ---
-title: Black-Scholes Formula 
+title: Note | Black-Scholes Formula 
 date: 2024-09-16 23:30:31
 mathjax: true
 categories:
 - Reading-Note
+- Notes
 tags:
 - Finacial 101
 ShowToc: true

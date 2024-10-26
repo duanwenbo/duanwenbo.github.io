@@ -1,5 +1,5 @@
 ---
-title: Finacial metaverse
+title: Digest | Finacial metaverse
 date: 2024-10-13 23:30:31
 mathjax: false
 categories:

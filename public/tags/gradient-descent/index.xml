@@ -14,7 +14,7 @@
     <lastBuildDate>Thu, 01 Apr 2021 03:18:18 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/gradient-descent/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Polynomial Regression and Feature Scaling</title>
+      <title>Note | Polynomial Regression and Feature Scaling</title>
       <link>http://localhost:1313/posts/scaling/</link>
       <pubDate>Thu, 01 Apr 2021 03:18:18 +0000</pubDate>
       <guid>http://localhost:1313/posts/scaling/</guid>
@@ -22,7 +22,7 @@
 &lt;p&gt;It is common to consider more than one features when making a prediction. For example when predicting the price of a house:&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Batch Gradient Descent Algorithm</title>
+      <title>Note | Batch Gradient Descent Algorithm</title>
       <link>http://localhost:1313/posts/gradient-decent/</link>
       <pubDate>Sun, 14 Mar 2021 23:30:31 +0000</pubDate>
       <guid>http://localhost:1313/posts/gradient-decent/</guid>

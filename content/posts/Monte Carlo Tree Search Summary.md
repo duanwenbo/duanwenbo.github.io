@@ -1,5 +1,5 @@
 ---
-title: Monte Carlo Tree Search Summary
+title: Note | Monte Carlo Tree Search Summary
 date: 2023-01-11 23:54:22
 mathjax: true
 tags:
@@ -8,6 +8,7 @@ tags:
 - Reinforcement-Learning
 categories:
 - Reading-Note
+- Notes
 ShowToc: true
 ---
 

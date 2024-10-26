@@ -1,5 +1,5 @@
 ---
-title: Clique seperator
+title: Note | Clique seperator
 date: 2023-06-01 23:54:22
 mathjax: true
 tags:
@@ -9,6 +9,7 @@ tags:
 - Clique-Decomposition
 categories:
 - Reading-Note
+- Notes
 ShowToc: true
 
 ---

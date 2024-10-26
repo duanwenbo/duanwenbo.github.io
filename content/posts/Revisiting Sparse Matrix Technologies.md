@@ -1,5 +1,5 @@
 ---
-title: Revisiting Sparse Matrix Technologies
+title: Note | Revisiting Sparse Matrix Technologies
 date: 2023-04-26 23:54:22
 mathjax: true
 tags:
@@ -11,6 +11,7 @@ tags:
 - Graph-Theory
 categories:
 - Reading-Note
+- Note
 ShowToc: true
 ---
 

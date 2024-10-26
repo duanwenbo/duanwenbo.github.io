@@ -14,7 +14,7 @@
     <lastBuildDate>Thu, 01 Jun 2023 23:56:22 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/graph-theory/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Common Terminologies in Graph Thoery</title>
+      <title>Note | Common Terminologies in Graph Thoery</title>
       <link>http://localhost:1313/posts/common-terminologies-in-graph-thoery/</link>
       <pubDate>Thu, 01 Jun 2023 23:56:22 +0000</pubDate>
       <guid>http://localhost:1313/posts/common-terminologies-in-graph-thoery/</guid>
@@ -32,7 +32,7 @@
 &lt;p&gt;&lt;strong&gt;Chordal Completion&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Clique seperator</title>
+      <title>Note | Clique seperator</title>
       <link>http://localhost:1313/posts/decomposition-by-clique-seperator/</link>
       <pubDate>Thu, 01 Jun 2023 23:54:22 +0000</pubDate>
       <guid>http://localhost:1313/posts/decomposition-by-clique-seperator/</guid>
@@ -47,7 +47,7 @@
 &lt;p&gt;&lt;a href=&#34;https://scholar.google.com/citations?user=lazJixIAAAAJ&amp;amp;hl=zh-CN&amp;amp;oi=sra&#34;&gt;Text description&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Revisiting Sparse Matrix Technologies</title>
+      <title>Note | Revisiting Sparse Matrix Technologies</title>
       <link>http://localhost:1313/posts/revisiting-sparse-matrix-technologies/</link>
       <pubDate>Wed, 26 Apr 2023 23:54:22 +0000</pubDate>
       <guid>http://localhost:1313/posts/revisiting-sparse-matrix-technologies/</guid>
@@ -55,7 +55,7 @@
 &lt;p&gt;Revisitting the sparse matrix technology - Summary.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Reverse Cuthill-McKee Algorithm</title>
+      <title>Note | Reverse Cuthill-McKee Algorithm</title>
       <link>http://localhost:1313/posts/reverse-cuthill-mckee-algorithm/</link>
       <pubDate>Mon, 24 Apr 2023 23:54:22 +0000</pubDate>
       <guid>http://localhost:1313/posts/reverse-cuthill-mckee-algorithm/</guid>
@@ -63,7 +63,7 @@
 &lt;p&gt;Revisitting the sparse matrix technology.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Nested Dissection Algorithm</title>
+      <title>Note | Nested Dissection Algorithm</title>
       <link>http://localhost:1313/posts/nested-dissection/</link>
       <pubDate>Fri, 14 Apr 2023 23:54:22 +0000</pubDate>
       <guid>http://localhost:1313/posts/nested-dissection/</guid>

@@ -1,5 +1,5 @@
 ---
-title: Normal Equation
+title: Note | Normal Equation
 date: 2021-04-01 23:54:22
 mathjax: true
 tags:
@@ -7,6 +7,7 @@ tags:
 - Normal-Equation
 categories:
 - Machine-Learning-Notes
+- Notes
 ShowToc: true
 ---
 

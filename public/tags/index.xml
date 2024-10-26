@@ -21,13 +21,6 @@
       <description></description>
     </item>
     <item>
-      <title>毛选</title>
-      <link>http://localhost:1313/tags/%E6%AF%9B%E9%80%89/</link>
-      <pubDate>Mon, 30 Sep 2024 23:30:31 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E6%AF%9B%E9%80%89/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Finacial 101</title>
       <link>http://localhost:1313/tags/finacial-101/</link>
       <pubDate>Mon, 16 Sep 2024 23:30:31 +0000</pubDate>
@@ -179,6 +172,13 @@
       <link>http://localhost:1313/tags/mean-normalization/</link>
       <pubDate>Thu, 01 Apr 2021 03:18:18 +0000</pubDate>
       <guid>http://localhost:1313/tags/mean-normalization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Notes</title>
+      <link>http://localhost:1313/tags/notes/</link>
+      <pubDate>Sun, 14 Mar 2021 23:30:31 +0000</pubDate>
+      <guid>http://localhost:1313/tags/notes/</guid>
       <description></description>
     </item>
     <item>

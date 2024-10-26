@@ -1,5 +1,5 @@
 ---
-title: Quick Notes on SQL
+title: Note | Quick Notes on SQL
 date: 2023-06-26 23:54:22
 mathjax: true
 tags:

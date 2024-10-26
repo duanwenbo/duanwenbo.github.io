@@ -1,9 +1,9 @@
 ---
-title: SQL Boy的第一个月
+title: Daily | SQL Boy的第一个月
 date: 2023-12-11 23:30:31
 mathjax: false
 categories:
-- Blog
+- Daily
 tags:
 - reflection
 ShowToc: true

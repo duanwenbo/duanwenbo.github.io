@@ -1,9 +1,10 @@
 ---
-title: 期货合约的定价机制 - 以LME铜为例
+title: Note | 期货合约的定价机制 - 以LME铜为例
 date: 2024-09-09 23:30:31
 mathjax: false
 categories:
 - Reading-Note
+- Note
 tags:
 - Finacial 101
 ShowToc: true

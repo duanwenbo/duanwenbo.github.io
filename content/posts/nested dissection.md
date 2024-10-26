@@ -1,5 +1,5 @@
 ---
-title: Nested Dissection Algorithm
+title: Note | Nested Dissection Algorithm
 date: 2023-04-14 23:54:22
 mathjax: true
 tags:
@@ -8,6 +8,7 @@ tags:
 - Graph-Theory
 categories:
 - Reading-Note
+- Note
 ShowToc: true
 ---
 

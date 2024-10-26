@@ -14,7 +14,7 @@
     <lastBuildDate>Thu, 01 Jun 2023 23:54:22 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/minimum-degree/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Clique seperator</title>
+      <title>Note | Clique seperator</title>
       <link>http://localhost:1313/posts/decomposition-by-clique-seperator/</link>
       <pubDate>Thu, 01 Jun 2023 23:54:22 +0000</pubDate>
       <guid>http://localhost:1313/posts/decomposition-by-clique-seperator/</guid>
@@ -29,7 +29,7 @@
 &lt;p&gt;&lt;a href=&#34;https://scholar.google.com/citations?user=lazJixIAAAAJ&amp;amp;hl=zh-CN&amp;amp;oi=sra&#34;&gt;Text description&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Revisiting Sparse Matrix Technologies</title>
+      <title>Note | Revisiting Sparse Matrix Technologies</title>
       <link>http://localhost:1313/posts/revisiting-sparse-matrix-technologies/</link>
       <pubDate>Wed, 26 Apr 2023 23:54:22 +0000</pubDate>
       <guid>http://localhost:1313/posts/revisiting-sparse-matrix-technologies/</guid>

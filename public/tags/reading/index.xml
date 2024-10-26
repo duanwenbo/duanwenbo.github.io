@@ -14,7 +14,7 @@
     <lastBuildDate>Mon, 26 Jun 2023 23:54:22 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/reading/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Quick Notes on SQL</title>
+      <title>Note | Quick Notes on SQL</title>
       <link>http://localhost:1313/posts/sql-concept/</link>
       <pubDate>Mon, 26 Jun 2023 23:54:22 +0000</pubDate>
       <guid>http://localhost:1313/posts/sql-concept/</guid>
@@ -66,7 +66,7 @@
 &lt;p&gt;&lt;strong&gt;Select, Create, Delete&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Revisiting Sparse Matrix Technologies</title>
+      <title>Note | Revisiting Sparse Matrix Technologies</title>
       <link>http://localhost:1313/posts/revisiting-sparse-matrix-technologies/</link>
       <pubDate>Wed, 26 Apr 2023 23:54:22 +0000</pubDate>
       <guid>http://localhost:1313/posts/revisiting-sparse-matrix-technologies/</guid>
@@ -74,7 +74,7 @@
 &lt;p&gt;Revisitting the sparse matrix technology - Summary.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Reverse Cuthill-McKee Algorithm</title>
+      <title>Note | Reverse Cuthill-McKee Algorithm</title>
       <link>http://localhost:1313/posts/reverse-cuthill-mckee-algorithm/</link>
       <pubDate>Mon, 24 Apr 2023 23:54:22 +0000</pubDate>
       <guid>http://localhost:1313/posts/reverse-cuthill-mckee-algorithm/</guid>
