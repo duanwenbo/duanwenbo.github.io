@@ -19,6 +19,8 @@ ShowToc: true
 
 
 
+### Synthetic Assets
+
 Synthetic assets surround us in our daily lives. Look around you. The number 18 token that the cloakroom girl gave you in exchange for your coat? That is a synthetic asset. Its intrinsic value is nil. It is simply a small plastic disc, too large even to insert in the anti-theft system of your supermarket’s trolley. Instead, its value is as a sign. Only imagine the drama that would accompany its loss: a brand new coat! The cloakroom girl owns the other half of the key, an identical token, with the same number 18 emblazoned in gold. She also understands the convention. The person who offers her the matching token will be handed the corresponding coat. No further explanation is required. While a small tip might change hands, this is far from compulsory. Such an example might sound trivial. An unintentional exchange cannot be ruled out if the girl has a moment of absence. In general, however, the process leaves little room for confusion. On the other hand, when synthetic assets are meant to represent classes of objects, some of which can be abstract, things can become a little more confusing (Illustration 1)
 
  什么是合成资产？以在剧院寄存外套的小硬币为例，你把衣服交给前台的女孩，换来一个标记为18的塑料硬币，这是一个塑料片，实际价值约为0，甚至放不进tesco的手推车里。可能只有剧院会承担它带来的损失 - 一件全新的外套。女孩拥有钥匙的另一半，一个同样标记为18，但是金色装饰的硬币。她懂得如何转换 - 当女孩收到的硬币与自己手上的硬币匹配时，她便会把对应的外套取出来，无需多余的解释。或许有时会有一些小费，但这完全不是硬性要求。上述的流程可能听着琐碎，但是如果女孩不在场，我们不能排除一些无意错误交换发生的可能性。但一般来说，这个过程几乎不会造成混淆。但另一方面，当合成资产代表的事物越来越抽象时，事情可能会变的混乱起来。
@@ -33,7 +35,7 @@ Synthetic assets surround us in our daily lives. Look around you. The number 18 
 
 
 
-**Two Main Risk Management Frameworks**
+### Two Main Risk Management Frameworks
 
 1. Risk Pooling - 风险共担
 
@@ -59,3 +61,24 @@ Synthetic assets surround us in our daily lives. Look around you. The number 18 
    - 交易对手方**通常没有机会控制意外事件的结果**
 
 (当然也有意外，但这与衍生品机制无关，更多的是市场的普遍问题，青山控股镍期货squeeze short事件作为代表)
+
+
+
+### Dematerialisation:
+
+> A lower level of market economy: Shops, door-to-door salesmen
+>
+> A higher level: fairs and exchange
+
+- 金融市场与不同的衍生品极大增强了金融资产的流动性，实现资产的去物质化（Dematerialisation)
+
+
+
+####  The pyrimid of finacial abstraction:  流动性的不同层级
+
+1. 现金，实物资产
+
+2. 已分配的资产（投资者有持有权）：电子仓单、单一资产实物ETF，分配给投资者的实物黄金
+3. 未分配的资产（由银行持有，投资者对资产有债权）、公司信贷和债券。
+4. 实物资产为基础的指数ETF和各种投资基金
+5. 各种金融衍生品，如期货合约和信用违约互换（CDS）
