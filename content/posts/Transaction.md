@@ -1,6 +1,6 @@
 ---
 title: Digest | SQL Quick Note 2
-date: 2025-1-13 23:30:31
+date: 2025-01-13 23:30:31
 mathjax: false
 categories:
 - Digest
