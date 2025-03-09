@@ -11,8 +11,49 @@
     </image>
     <generator>Hugo -- 0.136.2</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 14 Mar 2021 23:30:31 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jan 2025 23:30:31 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Digest | SQL Quick Note 2</title>
+      <link>http://localhost:1313/posts/transaction/</link>
+      <pubDate>Mon, 13 Jan 2025 23:30:31 +0000</pubDate>
+      <guid>http://localhost:1313/posts/transaction/</guid>
+      <description>&lt;h3 id=&#34;transaction&#34;&gt;Transaction&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Transaction is a series of queries&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It&amp;rsquo;s the unit of operation&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Non-devisible, either all queries executed, either none&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Important way to maintain consistency and &lt;em&gt;data integrity&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;BEGIN&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;TRANSACTION&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;COMMIT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;ROLLBACK&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;atomicity&#34;&gt;Atomicity&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The transaction is indivisible&lt;/li&gt;
+&lt;li&gt;Rollback when failed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;the-atomicity-is-achived-by-undo-log&#34;&gt;The Atomicity is achived by Undo Log&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Undo log stores the reversve operation logic with every queries&lt;/li&gt;
+&lt;li&gt;Undo log is stored in the different table space&lt;/li&gt;
+&lt;li&gt;It will mainly record the value and operation&lt;/li&gt;
+&lt;li&gt;If a ROLLBACK invoked, the data is able to be restored by undo-log&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;consistency&#34;&gt;Consistency&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Consistency refers to data consistency and read consistency&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Note | Batch Gradient Descent Algorithm</title>
       <link>http://localhost:1313/posts/gradient-decent/</link>

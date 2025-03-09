@@ -1,14 +1,14 @@
 ---
-title: Note | Option Trading and Greeks
-date: 2025-03-09 23:30:31
-mathjax: true
+title: Digest | Option Trading
+date: 2025-03-09 10:30:31
+mathjax: false
 categories:
-- Note
+- Digest
 tags:
-- Option
-- Finacial Market
+- Notes
 ShowToc: true
 ---
+
 
 What is Option Trading ?
 

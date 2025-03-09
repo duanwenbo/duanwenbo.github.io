@@ -11,10 +11,51 @@
     </image>
     <generator>Hugo -- 0.136.2</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 26 Oct 2024 15:30:31 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jan 2025 23:30:31 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Digest | 当我谈跑步时，我在谈些什么</title>
+      <title>Digest | SQL Quick Note 2</title>
+      <link>http://localhost:1313/posts/transaction/</link>
+      <pubDate>Mon, 13 Jan 2025 23:30:31 +0000</pubDate>
+      <guid>http://localhost:1313/posts/transaction/</guid>
+      <description>&lt;h3 id=&#34;transaction&#34;&gt;Transaction&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Transaction is a series of queries&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It&amp;rsquo;s the unit of operation&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Non-devisible, either all queries executed, either none&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Important way to maintain consistency and &lt;em&gt;data integrity&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;BEGIN&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;TRANSACTION&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;COMMIT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;ROLLBACK&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;atomicity&#34;&gt;Atomicity&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The transaction is indivisible&lt;/li&gt;
+&lt;li&gt;Rollback when failed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;the-atomicity-is-achived-by-undo-log&#34;&gt;The Atomicity is achived by Undo Log&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Undo log stores the reversve operation logic with every queries&lt;/li&gt;
+&lt;li&gt;Undo log is stored in the different table space&lt;/li&gt;
+&lt;li&gt;It will mainly record the value and operation&lt;/li&gt;
+&lt;li&gt;If a ROLLBACK invoked, the data is able to be restored by undo-log&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;consistency&#34;&gt;Consistency&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Consistency refers to data consistency and read consistency&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Digest | 当我谈跑步时，我在谈些什么?</title>
       <link>http://localhost:1313/posts/what-i-talk-about-when-i-talk-about-running/</link>
       <pubDate>Sat, 26 Oct 2024 15:30:31 +0000</pubDate>
       <guid>http://localhost:1313/posts/what-i-talk-about-when-i-talk-about-running/</guid>
@@ -46,7 +87,7 @@
 &lt;p&gt;&lt;strong&gt;# 享受过程，接纳自己，丢掉期待&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&amp;gt; 并不是有个人跑来找我，又劝我“你跑步吧”，我就沿着马路开始跑步。也没有什么人跑来找我，跟我说“你当小说家吧”，我就开始写小说。突然有一天，我出于喜欢开始写小说。又有一天，我出于喜欢开始在马路上跑步。不拘什么，按照喜欢的方式做喜欢的事，我就是这样生活的。纵然受到别人阻止，遭到恶意非难，我都不曾改变。这样一个人，又能向谁索求什么呢？&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;我仰望天空。能看到一丝一毫的爱心么？不，看不到。只有太平洋上空悠然飘来浮去，无所事事的夏日云朵。云朵永远沉默无语。它们什么都不对我说。或许我不该仰望天空，应当将视线投去我的内部。我试着看向自己的内部，就如同窥视深深的井底。那里可以看到爱心么？不，看不到。看到的只有我的性格。我那个人的，顽固的，缺乏协调性的，妹妹任性妄为又常常怀疑自己的，哪怕遇到痛苦也想在其中发现可笑之处的性格。我拎着它，就像拎着一个古旧的旅行包，踱过了漫长的历程。我并不是因为喜欢才拎着它。与内容相比，它显得太沉重，外观也不起眼，还到处绽开了线。我只是没有别的东西可拎，无奈才拎着它彷徨徘徊。然而，我心中却对它怀有某种依依不舍的情感。&lt;/p&gt;
+&lt;p&gt;我仰望天空。能看到一丝一毫的爱心么？不，看不到。只有太平洋上空悠然飘来浮去，无所事事的夏日云朵。云朵永远沉默无语。它们什么都不对我说。或许我不该仰望天空，应当将视线投去我的内部。我试着看向自己的内部，就如同窥视深深的井底。那里可以看到爱心么？不，看不到。看到的只有我的性格。我那个人的，顽固的，缺乏协调性的，每每任性妄为又常常怀疑自己的，哪怕遇到痛苦也想在其中发现可笑之处的性格。我拎着它，就像拎着一个古旧的旅行包，踱过了漫长的历程。我并不是因为喜欢才拎着它。与内容相比，它显得太沉重，外观也不起眼，还到处绽开了线。我只是没有别的东西可拎，无奈才拎着它彷徨徘徊。然而，我心中却对它怀有某种依依不舍的情感。&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
     <item>
@@ -58,7 +99,52 @@
 &lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p.ipic.vip/mbw1gp.jpg&#34; alt=&#34;61D9cyRNmiL.AC_UF894,1000_QL80&#34;  /&gt;
 &lt;/p&gt;
 &lt;hr&gt;
+&lt;h3 id=&#34;synthetic-assets&#34;&gt;Synthetic Assets&lt;/h3&gt;
 &lt;p&gt;Synthetic assets surround us in our daily lives. Look around you. The number 18 token that the cloakroom girl gave you in exchange for your coat? That is a synthetic asset. Its intrinsic value is nil. It is simply a small plastic disc, too large even to insert in the anti-theft system of your supermarket’s trolley. Instead, its value is as a sign. Only imagine the drama that would accompany its loss: a brand new coat! The cloakroom girl owns the other half of the key, an identical token, with the same number 18 emblazoned in gold. She also understands the convention. The person who offers her the matching token will be handed the corresponding coat. No further explanation is required. While a small tip might change hands, this is far from compulsory. Such an example might sound trivial. An unintentional exchange cannot be ruled out if the girl has a moment of absence. In general, however, the process leaves little room for confusion. On the other hand, when synthetic assets are meant to represent classes of objects, some of which can be abstract, things can become a little more confusing (Illustration 1)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Digest | 谁是我们的朋友，谁是我们的敌人？</title>
+      <link>http://localhost:1313/posts/%E6%AF%9B%E9%80%89%E5%8D%B7%E4%B8%80/</link>
+      <pubDate>Mon, 30 Sep 2024 23:30:31 +0000</pubDate>
+      <guid>http://localhost:1313/posts/%E6%AF%9B%E9%80%89%E5%8D%B7%E4%B8%80/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p.ipic.vip/fyn4iz.jpg&#34; alt=&#34;images&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;综上所述，可知一切勾结帝国主义的军阀、官僚、买办阶级、大地主阶级以及附属于他们的一部分反动知识界，是我们的敌人。工业无产阶级是我们革命的领导力量。一切半无产阶级、小资产阶级，是我们最接近的朋友。那动摇不定的中产阶级，其右翼可能是我们的敌人，其左翼可能是我们的朋友——但我们要时常提防他们，不要让他们扰乱了我们的阵线。&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;地主阶级买办阶级&#34;&gt;地主阶级，买办阶级&lt;/h3&gt;
+&lt;p&gt;帝国主义，国际资产阶级的附庸。代表中国最落后与最反 &lt;a href=&#34;What-I-Talk-About-When-I-Talk-About-Running.md&#34;&gt;What-I-Talk-About-When-I-Talk-About-Running.md&lt;/a&gt; 动的生产关系。&lt;/p&gt;
+&lt;h3 id=&#34;中产阶级&#34;&gt;中产阶级&lt;/h3&gt;
+&lt;p&gt;民族资产阶级，对中国革命具有矛盾的态度。举起左手打倒帝国主义，举起右手打倒共产党&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;小资产阶级，小知识阶级&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;自耕农和手工业主所经营的，都是小生产的经济。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;右派&lt;/p&gt;
+&lt;p&gt;第一部分是有余钱剩米的，即用其体力或脑力劳动所得。他们的经济地位和中产阶级颇接近，故对于中产阶级的宣传颇相信，对于革命取怀疑的态度。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;大部分属于中派&lt;/p&gt;
+&lt;p&gt;受到帝国主义，军阀，地主阶级的剥削，想发财而不得&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;小资产阶级左翼&lt;/p&gt;
+&lt;p&gt;这一部分人好些大概原先是所谓殷实人家，渐渐变得仅仅可以保住，渐渐变得生活下降了。&lt;/p&gt;
+&lt;p&gt;这种人在精神上感觉的痛苦很大，因为他们有一个从前和现在相反的比较。这种人在革命运动中颇要紧，是一个数量不小的群众，是小资产阶级的左翼。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;半无产阶级&#34;&gt;半无产阶级&lt;/h3&gt;
+&lt;p&gt;贫农 小手工业者&lt;/p&gt;
+&lt;p&gt;青黄不接，吃着不够。对于革命宣传极易接受。其需要一个变更现状的革命。&lt;/p&gt;
+&lt;h3 id=&#34;无产阶级&#34;&gt;无产阶级&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;工业无产阶级。&lt;/p&gt;
+&lt;p&gt;其很大一部分数量是在外国资产阶级的奴役下。虽然数量不多，但代表中国最进步的阶级，做了革命的领导力量。他们所以能如此，第一个原因是集中。无论哪种人都不如他们的集中。第二个原因是经济地位低下。他们失了生产手段，剩下两手，绝了发财的望，又受着帝国主义、军阀、资产阶级的极残酷的待遇。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;农村无产阶级&lt;/p&gt;
+&lt;p&gt;所谓农村无产阶级，是指长工、月工、零工等雇农而言。此种人在乡村中是最感困难者，在农民运动中和贫农处于同一紧要的地位。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Note | Black-Scholes Formula</title>

@@ -11,10 +11,73 @@
     </image>
     <generator>Hugo -- 0.136.2</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 26 Oct 2024 15:30:31 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 Mar 2025 10:30:31 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Digest | 当我谈跑步时，我在谈些什么</title>
+      <title>Digest | Option Trading</title>
+      <link>http://localhost:1313/posts/option-trading-and-black-scholes/</link>
+      <pubDate>Sun, 09 Mar 2025 10:30:31 +0000</pubDate>
+      <guid>http://localhost:1313/posts/option-trading-and-black-scholes/</guid>
+      <description>&lt;p&gt;What is Option Trading ?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;A security giving the right to buy or sell an asset, subject to certain conditions, with a specified period of time.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Strike Price 行权价； Premium 期权价；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;European Option: Exercisable only on the expiration date.
+American Option: Can be exercised at any time before the expiration date.&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p.ipic.vip/phebaw.png&#34; alt=&#34;image-20250222143349581&#34;  /&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;When the stock price is much greater than theexercise price,&lt;/strong&gt; the option is almost sure to be exercised. The current value ofthe option will thus be approximately equal to the price of the stock minusthe price of a pure discount bond that matures on the same date as theoption, with a face value equal to the striking price of the option.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Digest | SQL Quick Note 2</title>
+      <link>http://localhost:1313/posts/transaction/</link>
+      <pubDate>Mon, 13 Jan 2025 23:30:31 +0000</pubDate>
+      <guid>http://localhost:1313/posts/transaction/</guid>
+      <description>&lt;h3 id=&#34;transaction&#34;&gt;Transaction&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Transaction is a series of queries&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It&amp;rsquo;s the unit of operation&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Non-devisible, either all queries executed, either none&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Important way to maintain consistency and &lt;em&gt;data integrity&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;BEGIN&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;TRANSACTION&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;COMMIT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;ROLLBACK&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;atomicity&#34;&gt;Atomicity&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The transaction is indivisible&lt;/li&gt;
+&lt;li&gt;Rollback when failed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;the-atomicity-is-achived-by-undo-log&#34;&gt;The Atomicity is achived by Undo Log&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Undo log stores the reversve operation logic with every queries&lt;/li&gt;
+&lt;li&gt;Undo log is stored in the different table space&lt;/li&gt;
+&lt;li&gt;It will mainly record the value and operation&lt;/li&gt;
+&lt;li&gt;If a ROLLBACK invoked, the data is able to be restored by undo-log&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;consistency&#34;&gt;Consistency&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Consistency refers to data consistency and read consistency&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Digest | 当我谈跑步时，我在谈些什么?</title>
       <link>http://localhost:1313/posts/what-i-talk-about-when-i-talk-about-running/</link>
       <pubDate>Sat, 26 Oct 2024 15:30:31 +0000</pubDate>
       <guid>http://localhost:1313/posts/what-i-talk-about-when-i-talk-about-running/</guid>
@@ -46,7 +109,7 @@
 &lt;p&gt;&lt;strong&gt;# 享受过程，接纳自己，丢掉期待&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&amp;gt; 并不是有个人跑来找我，又劝我“你跑步吧”，我就沿着马路开始跑步。也没有什么人跑来找我，跟我说“你当小说家吧”，我就开始写小说。突然有一天，我出于喜欢开始写小说。又有一天，我出于喜欢开始在马路上跑步。不拘什么，按照喜欢的方式做喜欢的事，我就是这样生活的。纵然受到别人阻止，遭到恶意非难，我都不曾改变。这样一个人，又能向谁索求什么呢？&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;我仰望天空。能看到一丝一毫的爱心么？不，看不到。只有太平洋上空悠然飘来浮去，无所事事的夏日云朵。云朵永远沉默无语。它们什么都不对我说。或许我不该仰望天空，应当将视线投去我的内部。我试着看向自己的内部，就如同窥视深深的井底。那里可以看到爱心么？不，看不到。看到的只有我的性格。我那个人的，顽固的，缺乏协调性的，妹妹任性妄为又常常怀疑自己的，哪怕遇到痛苦也想在其中发现可笑之处的性格。我拎着它，就像拎着一个古旧的旅行包，踱过了漫长的历程。我并不是因为喜欢才拎着它。与内容相比，它显得太沉重，外观也不起眼，还到处绽开了线。我只是没有别的东西可拎，无奈才拎着它彷徨徘徊。然而，我心中却对它怀有某种依依不舍的情感。&lt;/p&gt;
+&lt;p&gt;我仰望天空。能看到一丝一毫的爱心么？不，看不到。只有太平洋上空悠然飘来浮去，无所事事的夏日云朵。云朵永远沉默无语。它们什么都不对我说。或许我不该仰望天空，应当将视线投去我的内部。我试着看向自己的内部，就如同窥视深深的井底。那里可以看到爱心么？不，看不到。看到的只有我的性格。我那个人的，顽固的，缺乏协调性的，每每任性妄为又常常怀疑自己的，哪怕遇到痛苦也想在其中发现可笑之处的性格。我拎着它，就像拎着一个古旧的旅行包，踱过了漫长的历程。我并不是因为喜欢才拎着它。与内容相比，它显得太沉重，外观也不起眼，还到处绽开了线。我只是没有别的东西可拎，无奈才拎着它彷徨徘徊。然而，我心中却对它怀有某种依依不舍的情感。&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
     <item>
@@ -58,6 +121,7 @@
 &lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p.ipic.vip/mbw1gp.jpg&#34; alt=&#34;61D9cyRNmiL.AC_UF894,1000_QL80&#34;  /&gt;
 &lt;/p&gt;
 &lt;hr&gt;
+&lt;h3 id=&#34;synthetic-assets&#34;&gt;Synthetic Assets&lt;/h3&gt;
 &lt;p&gt;Synthetic assets surround us in our daily lives. Look around you. The number 18 token that the cloakroom girl gave you in exchange for your coat? That is a synthetic asset. Its intrinsic value is nil. It is simply a small plastic disc, too large even to insert in the anti-theft system of your supermarket’s trolley. Instead, its value is as a sign. Only imagine the drama that would accompany its loss: a brand new coat! The cloakroom girl owns the other half of the key, an identical token, with the same number 18 emblazoned in gold. She also understands the convention. The person who offers her the matching token will be handed the corresponding coat. No further explanation is required. While a small tip might change hands, this is far from compulsory. Such an example might sound trivial. An unintentional exchange cannot be ruled out if the girl has a moment of absence. In general, however, the process leaves little room for confusion. On the other hand, when synthetic assets are meant to represent classes of objects, some of which can be abstract, things can become a little more confusing (Illustration 1)&lt;/p&gt;</description>
     </item>
     <item>
